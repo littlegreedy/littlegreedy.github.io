@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">404 Not Found：呀！迷路了...... | 小贪心</title>
+  <title itemprop="name">图床DIY | 小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -387,41 +387,196 @@ var _hmt = _hmt || [];
   </div>
 </header>
 
-        <div class="pattern-center-blank"></div>
-  
-  <div id="content" class="site-content">
-    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      <p>&lt;!DOCTYPE html&gt;</p>
-<html><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>         <meta charset="UTF-8"><br>         <title>万恶の 404</title><br>    </head><br>    <body><br>         <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" homepagename="返回博客首页" homepageurl="https://littlezero.top"></script><br>    </body><br></html>
-      <!-- .entry-content -->
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/zero@v1.0/CDNasFood.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero@v1.0/CDNasFood.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      图床DIY</h1>
+      <p class="entry-census">
+        <span>
+          <a href="littlezero.top">
+            <img src="https://cdn.jsdelivr.net/gh/littlegreedy/littlegreedy.github.io@v1.30/img/head.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="littlezero.top">littleGreedy</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-8-12<span class="bull">
+        ·</span>
       
-      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-      <footer class="post-footer">
-        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-        <div class="post-tags">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<span id="busuanzi_value_page_pv"><i class="fa fa-spinner"></i></span> Hits</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <p>其实我们每一个人都多多少少用过类似图床的东西~ </p>
+<p>本地相册</p>
+<p>相信大家都不陌生吧~</p>
+<p>但是更换电脑、手机后我们就查看不到了~</p>
+<p><strong>我们更希望能方便地快速地看到它，不仅是方便了自己，还可以是分享给他人</strong></p>
+<p>因为这样我们就能在任何设备上浏览它、备份它也可以将其分享在社交平台上~</p>
+<p>我们身边的QQ、Wechat和微博就可以做类似的事情</p>
+<p>但你大可不必认为它们就是你的图床</p>
+<p>因为不够格</p>
+<p>更因为我懒，好吧，那样访问太麻烦了~</p>
+<h1 id="关于图床"><a href="#关于图床" class="headerlink" title="关于图床"></a>关于图床</h1><p></p><p style="background-color:rgba(239,221,236,0.7)">图床究竟是个啥？</p><br>一般是指储存图片的服务器。在这里我们选用github做图床<p></p>
+<p></p><p style="background-color:rgba(239,221,236,0.7)">它可以干什么？</p><br>效果是通过链接即可快速访问图片<p></p>
+<p></p><p style="background-color:rgba(239,221,236,0.7)">简单吗？（重点）</p><br>十分简单方便    <p></p>
+<p>老实说，</p>
+<p>在不用github的情况下，我jio得没什么又免费又好的图床服务器了（github俨然成了我的60G网盘）</p>
+<p>在没有jsdelivr的情况下，我嫌加载图片速度慢了</p>
+<p>在没有picgo的时候，我甚至都不想用上面这套组合。。。</p>
+<h1 id="食用指北"><a href="#食用指北" class="headerlink" title="食用指北"></a>食用指北</h1><p></p><p style="background-color:rgba(219,233,243,0.7)">准备工作</p><br>原理：用github作自己的图床，利用picgo上传图片至你自己的github仓库，再使用cdn加速访问，<p></p>
+<p>传图工具<a id="download" href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> PicGo Download</span> </a></p>
+<p></p><p style="background-color:rgba(219,233,243,0.7)">如何食用？</p><br> get高科技三步走~<p></p>
+<h2 id="获取你的Token"><a href="#获取你的Token" class="headerlink" title="获取你的Token"></a>获取你的Token</h2><ol>
+<li><p>先在github中新建一个存图用的仓库：所有者你自己，名称任意，其他如图配置。</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/photobed/2.png" alt></p>
+<p> 一些颇具影响力的库名字大都简洁好记，也许你也可以取一个~</p>
+<p> 注：private模式 将无法生成外链形式！！</p>
+</li>
+</ol>
+<ol start="2">
+<li><p>打开github账户/Settings，打开左手边profile中最后一个设置项Developer settings</p>
+<p> 再点击Personal access token，点击右上角的Generate new token</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/photobed/4.png" alt></p>
+</li>
+<li><p>随意填写Token description，之后一定得把repo全勾！配置完毕后点击确定</p>
+<p> <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/photobed/3.png" alt></p>
+</li>
+<li><p>记住你的token码，只能看一次而且以后可能要用的，建议复制下来保存。</p>
+</li>
+</ol>
+<h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><p>在第一栏填入你的github名称/repo名称</p>
+<p>在第二栏填入你的分支名称，默认为master</p>
+<p>在第三栏填入你刚才申请到的Token；第四栏填入你的repo中的储存路径</p>
+<p>最后点击确认，再点击设为默认图床</p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/photobed/010.png" alt></p>
+<h2 id="CDN加速"><a href="#CDN加速" class="headerlink" title="CDN加速"></a>CDN加速</h2><p>访问酱紫生成的外链，生成的请求必须通过一层层接力才能传输到服务器，直到主服务器响应后才能进行下一步。自此一段奇妙的经历从cdn开始~</p>
+<p>CDN的全称为Content Delivery Network，即内容分发网络，是一种新型内容存储和分发技术。它将在缓存、调度、协议三方面进行优化，通过在网络上放置大量节点服务器，借以将用户的请求导向整个CDN网络中的最佳节点，最佳节点的判断并不仅仅依据用户的就近性，还包括服务器当前的负载。</p>
+<p>这样的架构使得CDN服务提供商能够代表他们客户，即内容供应商，向最终用户提供尽可能好的体验。</p>
+<p><span id="inline-green">就像一点点开了许多家分店，能就近购买了</span></p>
+<p>我选取得是jsdelivr，比较可靠。加没加cdn一眼就看得出！！！毕竟加cdn可以达到瞬间加载~</p>
+<p>访问格式：:<a href="https://cdn.jsdelivr.net/gh/用户名/库名/路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/用户名/库名/路径</a></p>
+<p>访问样例：<a href="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/CLANNAD.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/CLANNAD.png</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/photobed/00.png" alt></p>
+<p>你现在就可以制作自己的极速外链了~</p>
+<h1 id="餐后大甜点"><a href="#餐后大甜点" class="headerlink" title="餐后大甜点"></a>餐后大甜点</h1><p>之所以不选择其他图床，是因为github容量大，稳定。且自从被微软收购后，做图床存资源不再算滥用，现在非常值得信赖了，唯一的小缺点就是站点在国外访问速度一般。（亲测不影响）</p>
+<p>其他图床推荐：<a href="https://www.jianshu.com/p/9ca58d56a12a" target="_blank" rel="noopener">https://www.jianshu.com/p/9ca58d56a12a</a></p>
+<p>Jsdelivr还提供jquery、wordpress加速服务 <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">请戳</a></p>
+
         </div>
-        <div class="post-share">
-          <div class="social-share sharehidden share-component"></div>
-          <i class="iconfont show-share icon-forward"></i>
-        </div>
-      </footer><!-- .entry-footer -->
-    </article>
+        <!-- .entry-content -->
+       
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+		<i class="iconfont icon-tags"></i> <a href="https://littlezero/tag/page.tag/" rel="tag">page.tag</a> 	
+		</div>
+		<div class="post-like">
+<a class="specsZan " href="javascript:;" data-id="594" data-action="ding">
+	<i class="iconfont icon-like"></i> <span class="count">
+		0</span>
+	</a>
+</div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
       <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/201908undefinedintern/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/0.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/0.png">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                风起雨时</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/201908undefinedHexoIc/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/02.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/02.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Hexo Icarus主题配置完全手册</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "U0OpCnjhIuuQ0SBtTbBM8Edm-MdYXbMMI",
+        appKey: "RtTu6xIboGekWhDbViDrCM6v",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+		avatar:'' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+      })
+  }
+</script>
+
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/23.jpg" itemprop="image" alt="littleGreedy" height="70" width="70"></a>
+          <a href="littlezero.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/littlegreedy/littlegreedy.github.io@v1.30/img/head.jpg" itemprop="image" alt="littleGreedy" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="https://littlezero.top" itemprop="url" rel="author">littleGreedy</a>
+            <a href="littlezero.top" itemprop="url" rel="author">littleGreedy</a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>别装作很努力,结局不会陪你演戏。</p>
+        <p><i class="iconfont icon-write"></i>only love & learning</p>
       </section>
+    </main><!-- #main -->
   </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">404 Not Found：呀！迷路了...... | 小贪心</title>
+  <title itemprop="name">Hexo Icarus主题配置完全手册 | 小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -387,41 +387,232 @@ var _hmt = _hmt || [];
   </div>
 </header>
 
-        <div class="pattern-center-blank"></div>
-  
-  <div id="content" class="site-content">
-    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      <p>&lt;!DOCTYPE html&gt;</p>
-<html><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>         <meta charset="UTF-8"><br>         <title>万恶の 404</title><br>    </head><br>    <body><br>         <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" homepagename="返回博客首页" homepageurl="https://littlezero.top"></script><br>    </body><br></html>
-      <!-- .entry-content -->
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/02.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/02.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      Hexo Icarus主题配置完全手册</h1>
+      <p class="entry-census">
+        <span>
+          <a href="littlezero.top">
+            <img src="https://cdn.jsdelivr.net/gh/littlegreedy/littlegreedy.github.io@v1.30/img/head.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="littlezero.top">littleGreedy</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2019-8-11<span class="bull">
+        ·</span>
       
-      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-      <footer class="post-footer">
-        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-        <div class="post-tags">
+<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<span id="busuanzi_value_page_pv"><i class="fa fa-spinner"></i></span> Hits</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>Icarus /ˈɪˌkɜrəs/，出自希腊神话，他的发音可谓是清新俊逸格外好听。</p>
+<p>这主题让我爱不释手，我花费了许多心血，踩尽了无数坑，折腾地心甘情愿。</p>
+<p>本文内容为hexo—Icarus总记录文案，根据我自己的配置日记改编，马马虎虎称得上是大集合攻略了，简称集成攻略︿(￣︶￣)︿ 。由于Icarus和主流的NextT、yilia配置文件书写方式有些格格不入，导致网上大部分攻略的操作都很难照搬进Icarus中，太多东西需要自己摸索，故特写此篇希望能提供给icarus使用者一些小小的搭建经验和思路。</p>
+<h1 id="重要定义"><a href="#重要定义" class="headerlink" title="重要定义"></a>重要定义</h1><p>1）站点配置文件指Hexo根目录下的_config.yml</p>
+<p>2）主题配置文件指icarus目录下的_config.yml</p>
+<h1 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h1><p><a id="download" href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> Icarus Download</span> </a>（官方原版）<br><a href="https://github.com/MoeFE/Hexo-Theme-MoeIcarus" target="_blank" rel="noopener">Cute Icarus Download</a>（民间自改版作品）<br>将下载的icarus文件放入Hexo/themes路径下，记得把站点配置文件_config.yml的themes选项设为Icarus！</p>
+<p><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo官方doc          </a><br><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/categories/" target="_blank" rel="noopener">Icarus官方doc</a>（基础功能实现和已整合插件使用说明书）<br>配置必不可少的资料，虽然部分功能实现表述的很简略，但多阅读它没有什么坏处，也许你会从中发现让你眼前一亮的彩蛋。</p>
+<h1 id="主题文件结构"><a href="#主题文件结构" class="headerlink" title="主题文件结构"></a>主题文件结构</h1><p>（请好好利用这张地图）</p>
+<pre><code class="java">/includes
+/languages   #用来配置国际化语言版本，里边包含各种个配置像的文本翻译。
+/layout      #以ejs文件来定义各种含有配置信息调用的布局（绝大多数修改点的位置）
+/scripts     #一些JS脚本
+/source  
+   /css      #用来修改自定义样式，需要掌握一定的css语法。
+   /fonts    #定义字体文件，可以修改博客字体
+   /images   #本地调用的图片放这里
+   /js       #一些js脚本（特效.js存放处）
+   /404.html #自定义的公益404页面
+/_config.yml #YML数据串行化格式语言书写的配置文件（首先修改）
+
+</code></pre>
+<p>&nbsp;</p>
+<h1 id="开始施工"><a href="#开始施工" class="headerlink" title="开始施工"></a>开始施工</h1><p> <strong>0. 从零开始：</strong></p>
+<p>基础内容先放我自己用的攻略给大家配置，最后放一些我收藏的进阶内容。</p>
+<blockquote>
+<p>（带 * 为初级版本，可升级）</p>
+</blockquote>
+<p>表格列出/路径均为相对路径<br>对应绝对路径为 ~/hexo/themes/icarus/</p>
+<pre><code>e.g.       /_config.yml 为
+~/hexo/themes/icarus/_config.yml
+</code></pre><p>&nbsp;<br>&nbsp;<br> <strong>1. 基本功能实现：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/08.png" alt></p>
+<p>攻略位置：<a href="https://blog.csdn.net/marvine/article/details/89816846" target="_blank" rel="noopener">https://blog.csdn.net/marvine/article/details/89816846</a></p>
+<p> 2.<strong>进阶功能实现：</strong></p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/09.png" alt></p>
+<p>攻略位置：<a href="https://blog.csdn.net/qq_36759224/article/details/85420403#font_colorFF0000___font_289" target="_blank" rel="noopener">https://blog.csdn.net/qq_36759224/article/details/85420403#font_colorFF0000___font_289</a></p>
+<p><strong>3.查漏补缺</strong></p>
+<p>下面攻略非常全面。</p>
+<blockquote>
+<p>注意该攻略<strong>面向NextT主题</strong>，由于文件排布不一，部分资料很难直接套用，故上面给出专属Icarus的解决方案！</p>
+</blockquote>
+<p>攻略位置：<a href="https://www.jianshu.com/p/efbeddc5eb19" target="_blank" rel="noopener">https://www.jianshu.com/p/efbeddc5eb19</a><br><em>包含内容：</em>有站点配置文件的修改，添加分类和标签、RSS、文章版权，文章阅读数统计，fork me on GitHub，markdown语法的使用贴士与自定义。</p>
+<h1 id="正文开始"><a href="#正文开始" class="headerlink" title="正文开始"></a>正文开始</h1><p> 从前面的配置开始一路走来，想必你一定收获了很多体验，那么我们接下来去进行美化升级吧！</p>
+<p></p><p style="background-color:rgba(239,221,236,0.7)">1. 如何优雅地捕捉萌妹子（会说话，可换装）</p><br>参考资料：<p></p>
+<p><a id="download" href="https://github.com/stevenjoezhang/live2d-widget" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> live2d-widget</span> </a>（最简单最快捷的配置方法）</p>
+<p> <a id="download" href="https://haremu.com/p/205" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> live2d</span> </a>（最优方法，根据博文内容配置，装完就能自定义，推荐）</p>
+<p>UpUpUp！补充资料：<a href="https://www.wikimoe.com/?tag=Live2d" target="_blank" rel="noopener">萌妹纸增加陪聊功能</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/01" alt="在这里插入图片描述"></p>
+<h3 id="最快用法（三行代码按需插入完美运行）："><a href="#最快用法（三行代码按需插入完美运行）：" class="headerlink" title="最快用法（三行代码按需插入完美运行）："></a>最快用法（三行代码按需插入完美运行）：</h3><p>使用：live2d-widget</p>
+<p>首先安装依赖</p>
+<pre><code class="ejs">&lt; script src=&quot;https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css&quot;&gt;
+
+</code></pre>
+<p>将上面两行代码插入layout目录下layout.ejs文件的\<head><meta name="generator" content="Hexo 3.9.0">和\</head>标签内</p>
+<p>最后调用</p>
+<pre><code class="ejs">&lt; script src=&quot;https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p>将上面一行代码插入layout目录下layout.ejs文件的\<head><meta name="generator" content="Hexo 3.9.0">和\</head>标签内或者\<body>和\</body>标签内</p>
+<h3 id="CDN用法（可自定义的萌妹纸）："><a href="#CDN用法（可自定义的萌妹纸）：" class="headerlink" title="CDN用法（可自定义的萌妹纸）："></a>CDN用法（可自定义的萌妹纸）：</h3><p>使用：live2d-widget</p>
+<p>原理：萌妹的实现代码可通过该链接进行访问。<a href="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js</a></p>
+<p>如果要自定义有关内容，可以把这个仓库Fork一份，然后进行修改。这时，使用方法对应地变为</p>
+<pre><code class="ejs">&lt; script src=&quot;https://cdn.jsdelivr.net/gh/username/live2d-widget/autoload.js&quot;&gt;&lt;/script&gt; 
+
+</code></pre>
+<p>将username替换为你的GitHub用户名即可。</p>
+<p>酱纸就能通过jsdelivr访问存于你自己的仓库的萌妹纸代码，先clone到本地修改后再上传。</p>
+<p>当然如果模型在手想怎么改怎么改，你懂的。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/02" alt="绅士警告"></p>
+<h3 id="Self-Host-Usage："><a href="#Self-Host-Usage：" class="headerlink" title="Self-Host Usage："></a>Self-Host Usage：</h3><p>使用live2d</p>
+<p>最优方法，根据博文内容配置，装完就能自定义，无需git上传，hexo自动部署，推荐。</p>
+<p></p><p style="background-color:rgba(219,233,243,0.7)">2. 评论系统</p><br>hexo是静态网页博客，评论系统得借助第三方插件来完成。<p></p>
+<p>综合比较各大评论插件，鉴于界面美观和方便与否，我选择了Valine</p>
+<p>官方安装方法，浏览入口找到Valine comment plugin即可<br><a href="https://blog.zhangruipeng.me/hexo-theme-icarus/categories/Plugins/Comment/" target="_blank" rel="noopener">https://blog.zhangruipeng.me/hexo-theme-icarus/categories/Plugins/Comment/</a></p>
+<p>安装分三步，第一注册LeanCloud（推荐国际服 免身份验证），第二步将Valine提供的官方代码插入指定位置，第三参照官方安装方法配置主题_config.yml文件。</p>
+<p></p><p style="background-color:rgba(219,233,243,0.7)">3.访客小地球和图表</p><br>装点你的博客吧~<p></p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/04" alt="在这里插入图片描述"></p>
+<p><a href="https://www.revolvermaps.com/" target="_blank" rel="noopener">点击装配revolvermaps</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/03.png" alt="在这里插入图片描述"></p>
+<p>把html代码插入layout文件下的layout.ejs或者common/footer.ejs中就可以了~</p>
+<p></p><p style="background-color:rgba(239,221,236,0.7)">4.下出电脑屏幕的大雪~</p><br>这可比上面地不断随机刷新雪花图片的效果要up的多！<p></p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/05.jpg" alt></p>
+<p>   攻略链接：<a href="https://www.yaxi.net/2016-12-28/1211.html" target="_blank" rel="noopener">3D落雪</a></p>
+<p></p><p style="background-color:rgba(239,221,236,0.7)">5.Tidio</p><br>有了之前积累的经验想必不用我过多赘述你也知道该如何使用外链了吧~<p></p>
+<p>去<a href="https://www.tidio.com/panel/dashboard" target="_blank" rel="noopener">官网</a>试一试吧！</p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/06" alt="在这里插入图片描述"></p>
+<p></p><p style="background-color:rgba(219,233,243,0.7)">6.非常美观的分享按钮</p><br>超萌图标注册即送，赶快抱回家吧~<p></p>
+<p><a href="https://www.hotjar.com" target="_blank" rel="noopener">hotjar官网</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/hexoicarus/07" alt="在这里插入图片描述"></p>
+<h1 id="放在后面的话"><a href="#放在后面的话" class="headerlink" title="放在后面的话"></a>放在后面的话</h1><p>因为版面有限，关于Icarus文字排版，页面排版以及授人以渔的方法只得安排到下期发布了~<br>感谢Hexo社区的各位。</p>
+<p>本文完~</p>
+<p>参考：<a href="https://blog.csdn.net/qq_29329775/article/details/51019301" target="_blank" rel="noopener">https://blog.csdn.net/qq_29329775/article/details/51019301</a><br>参考：<a href="https://io-oi.me/tech/hexo-next-optimization.html#重要的定义" target="_blank" rel="noopener">https://io-oi.me/tech/hexo-next-optimization.html#重要的定义</a><br>来源：<a href="https://blog.csdn.net/marvine/article/details/89816846" target="_blank" rel="noopener">https://blog.csdn.net/marvine/article/details/89816846</a><br>来源：<a href="https://blog.csdn.net/qq_36759224/article/details/85420403#font_colorFF0000___font_289" target="_blank" rel="noopener">https://blog.csdn.net/qq_36759224/article/details/85420403#font_colorFF0000___font_289</a><br>来源：<a href="https://www.jianshu.com/p/efbeddc5eb19" target="_blank" rel="noopener">https://www.jianshu.com/p/efbeddc5eb19</a><br>来源：<a href="https://leflacon.github.io/9a99eb64/" target="_blank" rel="noopener">https://leflacon.github.io/9a99eb64/</a><br>来源：<a href="https://haremu.com/p/205" target="_blank" rel="noopener">https://haremu.com/p/205</a></p>
+
         </div>
-        <div class="post-share">
-          <div class="social-share sharehidden share-component"></div>
-          <i class="iconfont show-share icon-forward"></i>
-        </div>
-      </footer><!-- .entry-footer -->
-    </article>
+        <!-- .entry-content -->
+       
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+		<i class="iconfont icon-tags"></i> <a href="https://littlezero/tag/page.tag/" rel="tag">page.tag</a> 	
+		</div>
+		<div class="post-like">
+<a class="specsZan " href="javascript:;" data-id="594" data-action="ding">
+	<i class="iconfont icon-like"></i> <span class="count">
+		0</span>
+	</a>
+</div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
       <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/201908undefinedCDNasFood/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero@v1.0/CDNasFood.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/zero@v1.0/CDNasFood.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                图床DIY</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/201908undefinedjourneyLikelife/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/journeyLikelife/1.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/journeyLikelife/1.png">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                Hexo运营前记</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "U0OpCnjhIuuQ0SBtTbBM8Edm-MdYXbMMI",
+        appKey: "RtTu6xIboGekWhDbViDrCM6v",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+		avatar:'' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+      })
+  }
+</script>
+
       <section class="author-profile">
         <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/23.jpg" itemprop="image" alt="littleGreedy" height="70" width="70"></a>
+          <a href="littlezero.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/littlegreedy/littlegreedy.github.io@v1.30/img/head.jpg" itemprop="image" alt="littleGreedy" height="70" width="70"></a>
           <div class="meta">
             <span class="title">Author</span>
             <h3 itemprop="name">
-            <a href="https://littlezero.top" itemprop="url" rel="author">littleGreedy</a>
+            <a href="littlezero.top" itemprop="url" rel="author">littleGreedy</a>
             </h3>
           </div>
         </div>
         <hr>
-        <p><i class="iconfont icon-write"></i>别装作很努力,结局不会陪你演戏。</p>
+        <p><i class="iconfont icon-write"></i>only love & learning</p>
       </section>
+    </main><!-- #main -->
   </div><!-- #primary -->
 </div>
+
+
+
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

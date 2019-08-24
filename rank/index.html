@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">404 Not Found：呀！迷路了...... | 小贪心</title>
+  <title itemprop="name">rank | 小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -391,10 +391,47 @@ var _hmt = _hmt || [];
   
   <div id="content" class="site-content">
     <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      <p>&lt;!DOCTYPE html&gt;</p>
-<html><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>         <meta charset="UTF-8"><br>         <title>万恶の 404</title><br>    </head><br>    <body><br>         <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" homepagename="返回博客首页" homepageurl="https://littlezero.top"></script><br>    </body><br></html>
+      <p><div id="rank"></div></p>
+<script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+<script>AV.initialize("填你的appid", "填你的appkey");</script>
+<script type="text/javascript">
+  var time=0
+  var title=""
+  var url=""
+  var query = new AV.Query('Counter');
+  query.notEqualTo('id',0);
+  query.descending('time');
+  query.limit(15);
+  query.find().then(function (todo) {
+    for (var i=0;i<15;i++){
+      var result=todo[i].attributes;
+      time=result.time;
+      title=result.title;
+      url=result.url;
+      var content="<p>"+"<font color=#a7a7e5>"+"🌸 Time number: "+"</font>"+"<font color=#f1a8ce>"+time+"次  "+"</font>"+"<a href='"+"https://leflacon.github.io"+url+"'>"+title+"</a>"+"</p>";
+      document.getElementById("rank").innerHTML+=content
+    }
+  }, function (error) {
+    console.log("error");
+  });
+</script>
       <!-- .entry-content -->
       
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "U0OpCnjhIuuQ0SBtTbBM8Edm-MdYXbMMI",
+        appKey: "RtTu6xIboGekWhDbViDrCM6v",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+		avatar:'' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+      })
+  }
+</script>
+
       <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
       <footer class="post-footer">
         <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>

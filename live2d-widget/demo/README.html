@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
   
-  <title itemprop="name">404 Not Found：呀！迷路了...... | 小贪心</title>
+  <title itemprop="name">小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -391,10 +391,226 @@ var _hmt = _hmt || [];
   
   <div id="content" class="site-content">
     <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
-      <p>&lt;!DOCTYPE html&gt;</p>
-<html><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>         <meta charset="UTF-8"><br>         <title>万恶の 404</title><br>    </head><br>    <body><br>         <script type="text/javascript" src="//qzonestyle.gtimg.cn/qzone/hybrid/app/404/search_children.js" homepagename="返回博客首页" homepageurl="https://littlezero.top"></script><br>    </body><br></html>
+      <h1 id="Live2D-demo"><a href="#Live2D-demo" class="headerlink" title="Live2D demo"></a>Live2D demo</h1><p>Live2D 看板娘插件 (<a href="https://www.fghrsh.net/post/123.html" target="_blank" rel="noopener">https://www.fghrsh.net/post/123.html</a>) 的前端 HTML 源码</p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>基于 API 加载模型，支持 定制 提示语</li>
+<li>增加 参数设置 一键定制看板娘，易用性++</li>
+<li>增加 看板娘样式设置，可直接设置宽高度等</li>
+<li>支持多种一言接口，基于 JQuery UI 实现拖拽</li>
+</ul>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h3><pre><code class="shell">│  demo1-default.html       // 常规引用 Demo
+│  demo2-autoload.html      // autoload.js Demo
+│  demo3-waifu-tips.html    // 内置 waifu-tips Demo
+│
+└─assets
+        autoload.js                     // 自动异步加载
+        flat-ui-icons-regular.eot       // Flat UI 字体
+        flat-ui-icons-regular.svg       // Flat UI 字体
+        flat-ui-icons-regular.ttf       // Flat UI 字体
+        flat-ui-icons-regular.woff      // Flat UI 字体
+        live2d.js                       // Live2D 核心
+        waifu-tips.js                   // Live2D 看板娘 扩展
+        waifu-tips.json                 // Live2D 看板娘 提示语
+        waifu.css                       // Live2D 看板娘 样式表
+</code></pre>
+<h3 id="食用方法"><a href="#食用方法" class="headerlink" title="食用方法"></a>食用方法</h3><ul>
+<li><p>依赖类库</p>
+<ul>
+<li>JQuery (<code>waifu-tips.js</code>)</li>
+<li>JQuery UI (仅实现 <em>拖拽效果</em> 需要)</li>
+</ul>
+</li>
+<li><p>常规方式引入</p>
+<ol>
+<li>在 <code>&lt;/head&gt;</code> 前引入 <code>waifu.css</code> 样式表</li>
+<li>在 <code>&lt;/body&gt;</code> 前引入 <code>waifu-tips.js</code> 和 <code>live2d.js</code></li>
+<li>在 <code>&lt;/body&gt;</code> 前插入 初始化 JS，可在 初始化前 设置参数</li>
+</ol>
+</li>
+</ul>
+<pre><code class="html">&lt;html&gt;
+&lt;head&gt;
+
+        · · ·   · · ·
+
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://www.example.com/path/to/waifu.css&quot;/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+        · · ·   · · ·
+
+    &lt;div class=&quot;waifu&quot;&gt;
+        &lt;div class=&quot;waifu-tips&quot;&gt;&lt;/div&gt;
+        &lt;canvas id=&quot;live2d&quot; class=&quot;live2d&quot;&gt;&lt;/canvas&gt;
+        &lt;div class=&quot;waifu-tool&quot;&gt;
+            &lt;span class=&quot;fui-home&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;fui-chat&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;fui-eye&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;fui-user&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;fui-photo&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;fui-info-circle&quot;&gt;&lt;/span&gt;
+            &lt;span class=&quot;fui-cross&quot;&gt;&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;script src=&quot;path/to/waifu-tips.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;path/to/live2d.js&quot;&gt;&lt;/script&gt;
+
+    &lt;script type=&quot;text/javascript&quot;&gt;
+        live2d_settings[&#39;modelId&#39;] = 1;
+        live2d_settings[&#39;modelTexturesId&#39;] = 87;
+        initModel(&quot;https://www.example.com/path/to/waifu-tips.json&quot;)
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>autoload.js 引入<ol>
+<li>在 <code>&lt;/body&gt;</code> 前引入 <code>autoload.js</code></li>
+<li>修改 <code>autoload.js</code> 文件路径，可在 初始化前 设置参数</li>
+</ol>
+</li>
+</ul>
+<pre><code class="html">    · · ·   · · ·
+    &lt;script src=&quot;path/to/autoload.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<pre><code class="javascript">try {
+    · · ·   · · ·
+    live2d_settings[&#39;modelId&#39;] = 1;
+    live2d_settings[&#39;modelTexturesId&#39;] = 87;
+    initModel(&#39;https://www.example.com/path/to/waifu-tips.json&#39;);
+} catch(err) { console.log(&#39;[Error] JQuery is not defined.&#39;) }
+
+</code></pre>
+<ul>
+<li>定制属于你的看板娘<ul>
+<li>修改 <code>waifu-tips.js</code> 顶部的设置参数 (或初始化前设置</li>
+<li>修改 <code>waifu-tips.json</code>，定制看板娘提示语，打造专属看板娘</li>
+</ul>
+</li>
+</ul>
+<h3 id="设置参数"><a href="#设置参数" class="headerlink" title="设置参数"></a>设置参数</h3><p><em>Tips： <code>waifu-tips.js</code> 已自带默认参数，如无特殊要求可跳过</em></p>
+<ul>
+<li><p>后端接口</p>
+<ul>
+<li><p><code>live2d_settings[&#39;modelAPI&#39;]</code><br>看板娘 API 地址，默认值 <code>&#39;//live2d.fghrsh.net/api/&#39;</code></p>
+</li>
+<li><p><code>live2d_settings[&#39;tipsMessage&#39;]</code><br>提示语读取路径，默认值 <code>&#39;waifu-tips.json&#39;</code> (一般在 <code>initModel</code> 时指定)</p>
+</li>
+<li><p><code>live2d_settings[&#39;hitokotoAPI&#39;]</code><br>一言 API 接口，可选 <code>&#39;lwl12.com&#39;</code>，<code>&#39;hitokoto.cn&#39;</code>，<code>&#39;jinrishici.com&#39;</code> (古诗词)</p>
+</li>
+</ul>
+</li>
+<li><p>默认模型</p>
+<ul>
+<li><p><code>live2d_settings[&#39;modelId&#39;]</code><br>默认模型(分组) ID，可在 Demo 页 <code>[F12]</code> 呼出 <code>控制台(Console)</code> 找到</p>
+</li>
+<li><p><code>live2d_settings[&#39;modelTexturesId&#39;]</code><br>默认材质(模型) ID，可在 Demo 页 <code>[F12]</code> 呼出 <code>控制台(Console)</code> 找到</p>
+</li>
+</ul>
+</li>
+<li><p>工具栏设置</p>
+<ul>
+<li><code>live2d_settings[&#39;showToolMenu&#39;]</code>，      显示工具栏，     <code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;canCloseLive2d&#39;]</code>，    关闭看板娘 按钮，<code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;canSwitchModel&#39;]</code>，    切换模型 按钮，  <code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;canSwitchTextures&#39;]</code>， 切换材质 按钮，  <code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;canSwitchHitokoto&#39;]</code>， 切换一言 按钮，  <code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;canTakeScreenshot&#39;]</code>， 看板娘截图 按钮，<code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;canTurnToHomePage&#39;]</code>， 返回首页 按钮，  <code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;canTurnToAboutPage&#39;]</code>，跳转关于页 按钮，<code>true</code> | <code>false</code></li>
+</ul>
+</li>
+<li><p>模型切换模式</p>
+<ul>
+<li><code>live2d_settings[&#39;modelStorage&#39;]</code>，记录 ID (刷新后恢复)，<code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;modelRandMode&#39;]</code>，模型切换，可选 <code>&#39;rand&#39;</code> (随机) | <code>&#39;switch&#39;</code> (顺序)</li>
+<li><code>live2d_settings[&#39;modelTexturesRandMode&#39;]</code>，材质切换，可选 <code>&#39;rand&#39;</code> | <code>&#39;switch&#39;</code></li>
+</ul>
+</li>
+<li><p>提示消息选项</p>
+<ul>
+<li><code>live2d_settings[&#39;showHitokoto&#39;]</code>，空闲时一言，<code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;showF12Status&#39;]</code>，控制台显示加载状态，<code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;showF12Message&#39;]</code>，提示消息输出到控制台，<code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;showF12OpenMsg&#39;]</code>，控制台被打开触发提醒，<code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;showCopyMessage&#39;]</code>，内容被复制触发提醒，<code>true</code> | <code>false</code></li>
+<li><code>live2d_settings[&#39;showWelcomeMessage&#39;]</code>，进入面页时显示欢迎语，<code>true</code> | <code>false</code></li>
+</ul>
+</li>
+<li><p>看板娘样式设置</p>
+<ul>
+<li><code>live2d_settings[&#39;waifuSize&#39;]</code>，看板娘大小，例如 <code>&#39;280x250&#39;</code>，<code>&#39;600x535&#39;</code></li>
+<li><code>live2d_settings[&#39;waifuTipsSize&#39;]</code>，提示框大小，例如 <code>&#39;250x70&#39;</code>，<code>&#39;570x150&#39;</code></li>
+<li><code>live2d_settings[&#39;waifuFontSize&#39;]</code>，提示框字体，例如 <code>&#39;12px&#39;</code>，<code>&#39;30px&#39;</code></li>
+<li><code>live2d_settings[&#39;waifuToolFont&#39;]</code>，工具栏字体，例如 <code>&#39;14px&#39;</code>，<code>&#39;36px&#39;</code></li>
+<li><code>live2d_settings[&#39;waifuToolLine&#39;]</code>，工具栏行高，例如 <code>&#39;20px&#39;</code>，<code>&#39;36px&#39;</code></li>
+<li><p><code>live2d_settings[&#39;waifuToolTop&#39;]</code>，工具栏顶部边距，例如 <code>&#39;0px&#39;</code>，<code>&#39;-60px&#39;</code></p>
+</li>
+<li><p><code>live2d_settings[&#39;waifuMinWidth&#39;]</code><br>面页小于 指定宽度 隐藏看板娘，例如 <code>&#39;disable&#39;</code> (停用)，<code>&#39;768px&#39;</code></p>
+</li>
+<li><p><code>live2d_settings[&#39;waifuEdgeSide&#39;]</code><br>看板娘贴边方向，例如 <code>&#39;left:0&#39;</code> (靠左 0px)，<code>&#39;right:30&#39;</code> (靠右 30px)</p>
+</li>
+<li><p><code>live2d_settings[&#39;waifuDraggable&#39;]</code><br>拖拽样式，可选 <code>&#39;disable&#39;</code> (禁用)，<code>&#39;axis-x&#39;</code> (只能水平拖拽)，<code>&#39;unlimited&#39;</code> (自由拖拽)</p>
+</li>
+<li><p><code>live2d_settings[&#39;waifuDraggableRevert&#39;]</code>，松开鼠标还原拖拽位置，<code>true</code> | <code>false</code></p>
+</li>
+</ul>
+</li>
+<li><p>其他杂项设置</p>
+<ul>
+<li><code>live2d_settings[&#39;l2dVersion&#39;]</code>，当前版本 (无需修改)</li>
+<li><code>live2d_settings[&#39;l2dVerDate&#39;]</code>，更新日期 (无需修改)</li>
+<li><code>live2d_settings[&#39;homePageUrl&#39;]</code>，首页地址，可选 <code>&#39;auto&#39;</code> (自动)，<code>&#39;{URL 网址}&#39;</code></li>
+<li><code>live2d_settings[&#39;aboutPageUrl&#39;]</code>，关于页地址，<code>&#39;{URL 网址}&#39;</code></li>
+<li><code>live2d_settings[&#39;screenshotCaptureName&#39;]</code>，看板娘截图文件名，例如 <code>&#39;live2d.png&#39;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="定制提示语"><a href="#定制提示语" class="headerlink" title="定制提示语"></a>定制提示语</h3><p><em>Tips： <code>waifu-tips.json</code> 已自带默认提示语，如无特殊要求可跳过</em></p>
+<ul>
+<li><code>&quot;waifu&quot;</code> 系统提示<ul>
+<li><code>&quot;console_open_msg&quot;</code> 控制台被打开提醒（支持多句随机）</li>
+<li><code>&quot;copy_message&quot;</code> 内容被复制触发提醒（支持多句随机）</li>
+<li><code>&quot;screenshot_message&quot;</code> 看板娘截图提示语（支持多句随机）</li>
+<li><code>&quot;hidden_message&quot;</code> 看板娘隐藏提示语（支持多句随机）</li>
+<li><code>&quot;load_rand_textures&quot;</code> 随机材质提示语（暂不支持多句）</li>
+<li><code>&quot;hour_tips&quot;</code> 时间段欢迎语（支持多句随机）</li>
+<li><code>&quot;referrer_message&quot;</code> 请求来源欢迎语（不支持多句）</li>
+<li><code>&quot;referrer_hostname&quot;</code> 请求来源自定义名称（根据 host，支持多句随机）</li>
+<li><code>&quot;model_message&quot;</code> 模型切换欢迎语（根据模型 ID，支持多句随机）</li>
+<li><code>&quot;hitokoto_api_message&quot;</code>，一言 API 输出模板（不支持多句随机）</li>
+</ul>
+</li>
+<li><code>&quot;mouseover&quot;</code> 鼠标触发提示（根据 CSS 选择器，支持多句随机）</li>
+<li><code>&quot;click&quot;</code> 鼠标点击触发提示（根据 CSS 选择器，支持多句随机）</li>
+<li><code>&quot;seasons&quot;</code> 节日提示（日期段，支持多句随机）</li>
+</ul>
+<h2 id="版权声明"><a href="#版权声明" class="headerlink" title="版权声明"></a>版权声明</h2><blockquote>
+<p>( ˃ ˄ ˂̥̥ ) 都看到这了，点个 Star 吧 ~</p>
+</blockquote>
+<p><a href="https://designmodo.com/flat-free/" title="Flat UI Free" target="_blank" rel="noopener">Flat UI Free</a><br><a href="https://github.com/journey-ad/live2d_src" title="基于 #fea64e4 的修改版" target="_blank" rel="noopener">live2d_src / ©journey-ad / GPL v2.0</a><br><a href="https://imjad.cn/" title="猫与向日葵" target="_blank" rel="noopener">waifu-tips.js / ©journey-ad / CC BY-NC-SA 4.0</a>  </p>
+<p>Open sourced under the GPL v2.0 license.</p>
+
       <!-- .entry-content -->
       
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "U0OpCnjhIuuQ0SBtTbBM8Edm-MdYXbMMI",
+        appKey: "RtTu6xIboGekWhDbViDrCM6v",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+		avatar:'' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+      })
+  }
+</script>
+
       <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
       <footer class="post-footer">
         <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>

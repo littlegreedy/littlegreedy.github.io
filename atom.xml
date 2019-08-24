@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>小贪心</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="/"/>
+  <updated>2019-08-23T08:42:34.203Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name>littleGreedy</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>水果葡萄</title>
+    <link href="/201908undefinedintern3/"/>
+    <id>/201908undefinedintern3/</id>
+    <published>2019-08-20T02:26:06.000Z</published>
+    <updated>2019-08-23T08:42:34.203Z</updated>
+    
+    <summary type="html">
+    
+      小实习生（三）
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
+    
+      <category term="实习" scheme="/tags/%E5%AE%9E%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux安装到配置</title>
+    <link href="/201908undefinedlinux/"/>
+    <id>/201908undefinedlinux/</id>
+    <published>2019-08-19T15:14:13.000Z</published>
+    <updated>2019-08-20T16:55:50.385Z</updated>
+    
+    <summary type="html">
+    
+      记录失足掉落并爬出来的坑
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>QQ加好友+回复--利用tencent://内附web端打开本地exe方法</title>
+    <link href="/201908undefinedTencent/"/>
+    <id>/201908undefinedTencent/</id>
+    <published>2019-08-18T06:05:06.000Z</published>
+    <updated>2019-08-18T07:17:15.396Z</updated>
+    
+    <summary type="html">
+    
+      简单方便的使用电脑QQ，可嵌入的本地应用程序打开方式
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="菜谱系列" scheme="/tags/%E8%8F%9C%E8%B0%B1%E7%B3%BB%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>迷宫题解--栈</title>
+    <link href="/201908undefinedMaze1/"/>
+    <id>/201908undefinedMaze1/</id>
+    <published>2019-08-17T14:35:35.000Z</published>
+    <updated>2019-08-18T07:23:15.767Z</updated>
+    
+    <summary type="html">
+    
+      数据结构迷宫问题，2019年蓝桥杯考察题型
+    
+    </summary>
+    
+      <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GIFT_summer</title>
+    <link href="/201908undefinedgiftsummer/"/>
+    <id>/201908undefinedgiftsummer/</id>
+    <published>2019-08-15T14:17:47.000Z</published>
+    <updated>2019-08-17T14:34:06.642Z</updated>
+    
+    <summary type="html">
+    
+      叮！这里有一份礼物请签收
+    
+    </summary>
+    
+      <category term="资源" scheme="/categories/%E8%B5%84%E6%BA%90/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>身影和夏天</title>
+    <link href="/201908undefinedintern2/"/>
+    <id>/201908undefinedintern2/</id>
+    <published>2019-08-15T13:51:42.000Z</published>
+    <updated>2019-08-20T16:46:34.429Z</updated>
+    
+    <summary type="html">
+    
+      小实习生（二）
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
+    
+      <category term="实习" scheme="/tags/%E5%AE%9E%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>链表——多项式加法</title>
+    <link href="/201908undefinedlinkedList/"/>
+    <id>/201908undefinedlinkedList/</id>
+    <published>2019-08-14T14:25:59.000Z</published>
+    <updated>2019-08-14T16:44:41.386Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;center&gt;# 链表——多项式加法&lt;/center&gt;
+
+
+
+&lt;pre&gt;&lt;code class=&quot;c++&quot;&gt;#include &amp;amp;lt;iostream&amp;amp;gt;
+using namespace std;
+struct PolyNode {
+    int
+        
+      
+    
+    </summary>
+    
+      <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+      <category term="笔记" scheme="/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>风起雨时</title>
+    <link href="/201908undefinedintern/"/>
+    <id>/201908undefinedintern/</id>
+    <published>2019-08-13T07:51:23.000Z</published>
+    <updated>2019-08-20T16:47:08.261Z</updated>
+    
+    <summary type="html">
+    
+      小实习生（一）
+    
+    </summary>
+    
+      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
+    
+      <category term="实习" scheme="/tags/%E5%AE%9E%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>图床DIY</title>
+    <link href="/201908undefinedCDNasFood/"/>
+    <id>/201908undefinedCDNasFood/</id>
+    <published>2019-08-12T15:32:00.000Z</published>
+    <updated>2019-08-14T11:43:55.648Z</updated>
+    
+    <summary type="html">
+    
+      超可爱的食用方式之PicGo+CDN+Github篇
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="菜谱系列" scheme="/tags/%E8%8F%9C%E8%B0%B1%E7%B3%BB%E5%88%97/"/>
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo Icarus主题配置完全手册</title>
+    <link href="/201908undefinedHexoIc/"/>
+    <id>/201908undefinedHexoIc/</id>
+    <published>2019-08-11T13:05:30.000Z</published>
+    <updated>2019-08-20T01:46:21.781Z</updated>
+    
+    <summary type="html">
+    
+      Hexo配置开发合集之1.0
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo运营前记</title>
+    <link href="/201908undefinedjourneyLikelife/"/>
+    <id>/201908undefinedjourneyLikelife/</id>
+    <published>2019-08-10T15:37:30.000Z</published>
+    <updated>2019-08-14T11:40:10.796Z</updated>
+    
+    <summary type="html">
+    
+      踏上了一条漫长的坡路
+    
+    </summary>
+    
+      <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Clannad</title>
+    <link href="/201908undefined2019-08-02-cl/"/>
+    <id>/201908undefined2019-08-02-cl/</id>
+    <published>2019-08-02T15:37:30.000Z</published>
+    <updated>2019-08-10T14:30:42.960Z</updated>
+    
+    <summary type="html">
+    
+      译作经典，读作人生
+    
+    </summary>
+    
+      <category term="悦读" scheme="/categories/%E6%82%A6%E8%AF%BB/"/>
+    
+    
+      <category term="观后感" scheme="/tags/%E8%A7%82%E5%90%8E%E6%84%9F/"/>
+    
+      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo-Theme-Sakura</title>
+    <link href="/201812undefinedHexo-Theme-Sakura/"/>
+    <id>/201812undefinedHexo-Theme-Sakura/</id>
+    <published>2018-12-12T14:16:01.000Z</published>
+    <updated>2019-06-01T14:21:46.000Z</updated>
+    
+    <summary type="html">
+    
+      hexo-sakura主题使用教程
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="web" scheme="/tags/web/"/>
+    
+      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
+    
+  </entry>
+  
+</feed>
