@@ -435,16 +435,14 @@ var _hmt = _hmt || [];
 <p>但你大可不必认为它们就是你的图床</p>
 <p>因为不够格</p>
 <p>更因为我懒，好吧，那样访问太麻烦了~</p>
-<h1 id="关于图床"><a href="#关于图床" class="headerlink" title="关于图床"></a>关于图床</h1><p></p><p style="background-color:rgba(239,221,236,0.7)">图床究竟是个啥？</p><br>一般是指储存图片的服务器。在这里我们选用github做图床<p></p>
+<h1 id="一、关于图床"><a href="#一、关于图床" class="headerlink" title="一、关于图床"></a>一、关于图床</h1><p></p><p style="background-color:rgba(239,221,236,0.7)">图床究竟是个啥？</p><br>一般是指储存图片的服务器。<p></p>
+<p>许多大厂都提供免费的存储空间，七牛云的图床速度不错，但每隔30天就得换图床的链接就很烦；SM·MS也弱了很多，晚上有时候加载不出来；新浪据说加了防盗链，图床的功能已经挂掉了；综合而言在这里我们便选用github做图床</p>
 <p></p><p style="background-color:rgba(239,221,236,0.7)">它可以干什么？</p><br>效果是通过链接即可快速访问图片<p></p>
-<p></p><p style="background-color:rgba(239,221,236,0.7)">简单吗？（重点）</p><br>十分简单方便    <p></p>
-<p>老实说，</p>
-<p>在不用github的情况下，我jio得没什么又免费又好的图床服务器了（github俨然成了我的60G网盘）</p>
-<p>在没有jsdelivr的情况下，我嫌加载图片速度慢了</p>
-<p>在没有picgo的时候，我甚至都不想用上面这套组合。。。</p>
-<h1 id="食用指北"><a href="#食用指北" class="headerlink" title="食用指北"></a>食用指北</h1><p></p><p style="background-color:rgba(219,233,243,0.7)">准备工作</p><br>原理：用github作自己的图床，利用picgo上传图片至你自己的github仓库，再使用cdn加速访问，<p></p>
-<p>传图工具<a id="download" href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> PicGo Download</span> </a></p>
-<p></p><p style="background-color:rgba(219,233,243,0.7)">如何食用？</p><br> get高科技三步走~<p></p>
+<p></p><p style="background-color:rgba(239,221,236,0.7)">简单吗？（重点）</p><br>十分简单方便   ，用github作自己的图床，利用picgo上传图片至你自己的github仓库，再使用cdn加速访问。<p></p>
+<p>Github容量大，稳定。且自从被微软收购后，做图床存资源不再算滥用，现在非常值得信赖了，唯一的小缺点就是站点在国外，国内访问速度一般。</p>
+<h1 id="二、食用指北"><a href="#二、食用指北" class="headerlink" title="二、食用指北"></a>二、食用指北</h1><p></p><p style="background-color:rgba(219,233,243,0.7)">准备工作</p><br>传图工具：<p></p>
+<p><a id="download" href="https://github.com/Molunerfinn/PicGo" target="_blank" rel="noopener"><i class="fa fa-download"></i><span> PicGo Download</span> </a></p>
+<p></p><p style="background-color:rgba(219,233,243,0.7)">如何食用？</p><br> Get三步走~<p></p>
 <h2 id="获取你的Token"><a href="#获取你的Token" class="headerlink" title="获取你的Token"></a>获取你的Token</h2><ol>
 <li><p>先在github中新建一个存图用的仓库：所有者你自己，名称任意，其他如图配置。</p>
 <p> <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/photobed/2.png" alt></p>
@@ -463,22 +461,29 @@ var _hmt = _hmt || [];
 <li><p>记住你的token码，只能看一次而且以后可能要用的，建议复制下来保存。</p>
 </li>
 </ol>
-<h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><p>在第一栏填入你的github名称/repo名称</p>
-<p>在第二栏填入你的分支名称，默认为master</p>
-<p>在第三栏填入你刚才申请到的Token；第四栏填入你的repo中的储存路径</p>
-<p>最后点击确认，再点击设为默认图床</p>
+<h2 id="配置PicGo"><a href="#配置PicGo" class="headerlink" title="配置PicGo"></a>配置PicGo</h2><p>打开PicGo图床设置</p>
 <p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/photobed/010.png" alt></p>
-<h2 id="CDN加速"><a href="#CDN加速" class="headerlink" title="CDN加速"></a>CDN加速</h2><p>访问酱紫生成的外链，生成的请求必须通过一层层接力才能传输到服务器，直到主服务器响应后才能进行下一步。自此一段奇妙的经历从cdn开始~</p>
-<p>CDN的全称为Content Delivery Network，即内容分发网络，是一种新型内容存储和分发技术。它将在缓存、调度、协议三方面进行优化，通过在网络上放置大量节点服务器，借以将用户的请求导向整个CDN网络中的最佳节点，最佳节点的判断并不仅仅依据用户的就近性，还包括服务器当前的负载。</p>
+<ol>
+<li><p>在第一栏填入你的github名称/repo名称</p>
+</li>
+<li><p>在第二栏填入你的分支名称，默认为master</p>
+</li>
+<li><p>在第三栏填入你刚才申请到的Token；第四栏填入你的repo中的储存路径</p>
+</li>
+<li><p>最后点击确认，再点击设为默认图床</p>
+</li>
+</ol>
+<h2 id="CDN加速"><a href="#CDN加速" class="headerlink" title="CDN加速"></a>CDN加速</h2><p>访问酱紫生成的外链，生成的请求必须通过一层层接力才能传输到服务器，主服务器响应后才能进行下一步，结果呈现在网页上就是一张小图半天加载不出来，非常影响体验，更与我们的宗旨格格不入。可以说CDN的出现一改这番局面，能够达到瞬间加载~~</p>
+<p>CDN全称Content Delivery Network，即内容分发网络，是一种新型内容存储和分发技术。它将在缓存、调度、协议三方面进行优化，通过在网络上放置大量节点服务器，借以将用户的请求导向整个CDN网络中的最佳节点，最佳节点的判断并不仅仅依据用户的就近性，还包括服务器当前的负载。</p>
 <p>这样的架构使得CDN服务提供商能够代表他们客户，即内容供应商，向最终用户提供尽可能好的体验。</p>
-<p><span id="inline-green">就像一点点开了许多家分店，能就近购买了</span></p>
-<p>我选取得是jsdelivr，比较可靠。加没加cdn一眼就看得出！！！毕竟加cdn可以达到瞬间加载~</p>
+<p><span id="inline-green">就像一点点开了许多家分店，现在能就近购买了</span></p>
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><p>我选取的是免费的Jsdelivr，因其可靠性与加速性能，堪称国内CDN大热门，同时也是搭建博客必备。</p>
 <p>访问格式：:<a href="https://cdn.jsdelivr.net/gh/用户名/库名/路径" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/用户名/库名/路径</a></p>
 <p>访问样例：<a href="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/CLANNAD.png" target="_blank" rel="noopener">https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/CLANNAD.png</a></p>
 <p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/photobed/00.png" alt></p>
+<p>注意访问样例和图中链接的格式，你一定知道怎么如法炮制了吧~</p>
 <p>你现在就可以制作自己的极速外链了~</p>
-<h1 id="餐后大甜点"><a href="#餐后大甜点" class="headerlink" title="餐后大甜点"></a>餐后大甜点</h1><p>之所以不选择其他图床，是因为github容量大，稳定。且自从被微软收购后，做图床存资源不再算滥用，现在非常值得信赖了，唯一的小缺点就是站点在国外访问速度一般。（亲测不影响）</p>
-<p>其他图床推荐：<a href="https://www.jianshu.com/p/9ca58d56a12a" target="_blank" rel="noopener">https://www.jianshu.com/p/9ca58d56a12a</a></p>
+<h1 id="三、餐后小甜点"><a href="#三、餐后小甜点" class="headerlink" title="三、餐后小甜点"></a>三、餐后小甜点</h1><p>其他图床：<a href="https://www.jianshu.com/p/9ca58d56a12a" target="_blank" rel="noopener">https://www.jianshu.com/p/9ca58d56a12a</a></p>
 <p>Jsdelivr还提供jquery、wordpress加速服务 <a href="https://www.jsdelivr.com/" target="_blank" rel="noopener">请戳</a></p>
 
         </div>
@@ -742,6 +747,32 @@ $(document).ready(function() {
       </div>
     </div>
   </section>
+  
+ <!-- 下面两行为了实现换肤功能 -->
+  
+<div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
+                class="iconfont icon-gear inline-block rotating"></i> </span></div>
+</div>
+ 
+  
+<div class="skin-menu no-select" id="mainskin"  style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+</div>
+<canvas id="night-mode-cover"></canvas>
+
+  
   <div id="mo-nav" class="">
   <div class="m-avatar">
     <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/23.jpg">
@@ -945,6 +976,9 @@ $(document).ready(function() {
   <p style="text-align: center; font-size: 13px; color: #b9b9b9;">&copy 2019 hexo-sakura</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  
+  
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10/dist/APlayer.min.js"></script>
 <style>
@@ -1017,30 +1051,8 @@ $(document).ready(function() {
   	<!-- 样式一（鼠标点击更换样式） -->
 <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>
 
-
-	<!-- 下面两行为了实现换肤功能 -->
-  
-<div class="skin-menu no-select" id="mainskin"  style="position: fixed">
-    <div class="theme-controls row-container">
-        <ul class="menu-list">
-            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
-            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
-            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
-            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
-            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
-            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
-            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
-            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
-        </ul>
-    </div>
-<canvas id="night-mode-cover"></canvas>
  
-  
-<div class="changeSkin-gear no-select">
-    <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
-                class="iconfont icon-gear inline-block rotating"></i> </span></div>
-</div>
-
+	
  
 
   <!--动态线条背景-->
