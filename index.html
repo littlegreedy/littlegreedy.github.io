@@ -1321,7 +1321,32 @@ $(document).ready(function() {
   	<!-- 样式一（鼠标点击更换样式） -->
 <script src="https://g.joyinshare.com/hc/ribbon.min.js" type="text/javascript"></script>
 
+
+	<!-- 下面两行为了实现换肤功能 -->
   
+<div class="skin-menu no-select" id="mainskin"  style="position: fixed">
+    <div class="theme-controls row-container">
+        <ul class="menu-list">
+            <li id="white-bg"> <i class="fa fa-television" aria-hidden="true"></i></li>
+            <li id="sakura-bg"> <i class="iconfont icon-sakura"></i></li>
+            <li id="gribs-bg"> <i class="fa fa-slack" aria-hidden="true"></i></li>
+            <li id="KAdots-bg"> <i class="iconfont icon-dots"></i></li>
+            <li id="totem-bg"> <i class="fa fa-optin-monster" aria-hidden="true"></i></li>
+            <li id="pixiv-bg"> <i class="iconfont icon-pixiv"></i></li>
+            <li id="bing-bg"> <i class="iconfont icon-bing"></i></li>
+            <li id="dark-bg"> <i class="fa fa-moon-o" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+<canvas id="night-mode-cover"></canvas>
+ 
+  
+<div class="changeSkin-gear no-select">
+    <div class="keys" id="setbtn"> <span id="open-skinMenu"> 切换主题 | SCHEME TOOL &nbsp;<i
+                class="iconfont icon-gear inline-block rotating"></i> </span></div>
+</div>
+
+ 
+
   <!--动态线条背景-->
 <script type="text/javascript"
 color="220,220,220" opacity='1.0' zIndex="-2" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
