@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-08-24T09:12:52.708Z</updated>
+  <updated>2019-08-24T16:56:08.995Z</updated>
   <id>/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="/201908undefinedintern3/"/>
     <id>/201908undefinedintern3/</id>
     <published>2019-08-20T02:26:06.000Z</published>
-    <updated>2019-08-24T09:12:52.708Z</updated>
+    <updated>2019-08-24T16:56:08.995Z</updated>
     
     <summary type="html">
     
@@ -57,11 +57,11 @@
   </entry>
   
   <entry>
-    <title>intern3_0</title>
+    <title>意义的所在</title>
     <link href="/201908undefinedintern3-0/"/>
     <id>/201908undefinedintern3-0/</id>
     <published>2019-08-19T08:23:06.000Z</published>
-    <updated>2019-08-24T09:07:25.620Z</updated>
+    <updated>2019-08-24T16:57:26.329Z</updated>
     
     <summary type="html">
     
@@ -238,7 +238,7 @@ struct PolyNode {
     <link href="/201908undefinedHexoIc/"/>
     <id>/201908undefinedHexoIc/</id>
     <published>2019-08-11T13:05:30.000Z</published>
-    <updated>2019-08-20T01:46:21.781Z</updated>
+    <updated>2019-08-24T13:44:27.244Z</updated>
     
     <summary type="html">
     
@@ -269,9 +269,9 @@ struct PolyNode {
       <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
-      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
-    
       <category term="hexo" scheme="/tags/hexo/"/>
+    
+      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
