@@ -393,7 +393,7 @@ var _hmt = _hmt || [];
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/02.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/02.jpg">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/Echarts/27bad6039245d6885597b584aac27d1ed31b24c4.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/Echarts/27bad6039245d6885597b584aac27d1ed31b24c4.jpg">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
@@ -425,7 +425,8 @@ var _hmt = _hmt || [];
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>ECharts，是一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器），底层依赖轻量级的矢量图形库 <a href="https://github.com/ecomfe/zrender" target="_blank" rel="noopener">ZRender</a>，提供直观，交互丰富，可高度个性化定制的数据可视化图表。</p>
+          <p><a href="http://littlezero.top/DemoC/" target="_blank" rel="noopener">Demo</a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>ECharts，是一个使用 JavaScript 实现的开源可视化库，可以流畅的运行在 PC 和移动设备上，兼容当前绝大部分浏览器），底层依赖轻量级的矢量图形库 <a href="https://github.com/ecomfe/zrender" target="_blank" rel="noopener">ZRender</a>，提供直观，交互丰富，可高度个性化定制的数据可视化图表。</p>
 <p>上面是来自<a href="https://echarts.baidu.com/" target="_blank" rel="noopener">官网</a>的介绍。</p>
 <h1 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h1><p></p><p style="background-color:rgba(239,221,236,0.7)">优势</p><br>ECharts最强大的是容易上手，只要有一些前端知识就能驾驭；<p></p>
 <p>社区大，样式丰富选择多；</p>
@@ -433,7 +434,7 @@ var _hmt = _hmt || [];
 <p>它以HTML标记语言为载体，还可以在前端层面进行二次开发。</p>
 <p></p><p style="background-color:rgba(239,221,236,0.7)">劣势</p><br>ECharts.js体积较大，一个基础的ECharts.js都要400K左右，相对于D3.js和hightcharts.js来说都是比较大的；<p></p>
 <p>可定制（延展性）差，其留出的端口较少，使用只需配置几项，属于高度封装，一定程度上限制了用户自定义的可能。</p>
-<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><h4 id="第一步新建一个html文本"><a href="#第一步新建一个html文本" class="headerlink" title="第一步新建一个html文本"></a>第一步新建一个html文本</h4><pre><code class="html">&lt; !DOCTYPE html&gt;
+<h1 id="开始"><a href="#开始" class="headerlink" title="开始"></a>开始</h1><h4 id="第一步新建一个html文本"><a href="#第一步新建一个html文本" class="headerlink" title="第一步新建一个html文本"></a>第一步新建一个html文本</h4><pre><code class="html">&lt; !DOCTYPE html&gt;
 &lt;html&gt;
 &lt;head&gt;
 
@@ -468,7 +469,7 @@ var _hmt = _hmt || [];
 &lt;body&gt;
  &lt;!-- 为ECharts准备一个具备大小（宽高）的容器 --&gt;
 &lt;div id=&quot;main&quot; style=&quot;width: 700px;height:560px;float:right;&quot; &gt;&lt;/div&gt;
-&lt;script src=&quot;lib/test.js&quot;&gt;&lt;/script&gt;  #引入你的脚本 在head标签之间插入也可
+&lt;script src=&quot;lib/test.js&quot;&gt;&lt;/script&gt;  #引入你的脚本,在head标签之间插入也可,src为相对路径
 &lt;/body&gt;
 ...
 </code></pre>
@@ -476,7 +477,7 @@ var _hmt = _hmt || [];
 <li><p>在.html文件同目录下新建文件夹lib，在lib中新建test.js文件</p>
 </li>
 <li><p>将以下代码Ctrl+C Ctrl+V复制粘贴进test.js</p>
-<pre><code class="javascript">// 基于准备好的dom，初始化echarts实例
+<pre><code class="javascript">        // 基于准备好的dom，初始化echarts实例
         var myChart = echarts.init(document.getElementById(&#39;main&#39;));
 
         // 指定图表的配置项和数据
@@ -506,6 +507,29 @@ var _hmt = _hmt || [];
 <li><p>现在打开你的.html文件吧！</p>
 </li>
 </ol>
+<h1 id="还能更好吗"><a href="#还能更好吗" class="headerlink" title="还能更好吗"></a>还能更好吗</h1><h4 id="脚本标签的引入有两种方式："><a href="#脚本标签的引入有两种方式：" class="headerlink" title="脚本标签的引入有两种方式："></a>脚本标签的引入有两种方式：</h4><ul>
+<li><pre><code class="html">&lt;script src=&quot;路径/脚本文件名.js&quot;&gt;&lt;/script&gt; #src为相对路径（本文实例，推荐使用）
+</code></pre>
+</li>
+</ul>
+<p><strong>或</strong></p>
+<ul>
+<li><pre><code class="html">&lt;script type=&quot;text/javascript&quot;&gt;
+  //在这里面写你的js代码
+  &lt;/script&gt;
+
+</code></pre>
+</li>
+</ul>
+<h4 id="div容器的并列："><a href="#div容器的并列：" class="headerlink" title="div容器的并列："></a>div容器的并列：</h4><ul>
+<li><p>CSS设定漂浮float:left</p>
+</li>
+<li><p>CSS设定同行display：inline</p>
+</li>
+<li><p>style=“float:left;” （此处推荐）</p>
+</li>
+</ul>
+<h4 id="点此查阅其他图表：社区"><a href="#点此查阅其他图表：社区" class="headerlink" title="点此查阅其他图表：社区"></a>点此查阅其他图表：<a href="https://gallery.echartsjs.com/explore.html#sort=rank~timeframe=all~author=all" target="_blank" rel="noopener">社区</a></h4><p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/Echarts/2wallpaper20.png" alt></p>
 
         </div>
         <!-- .entry-content -->

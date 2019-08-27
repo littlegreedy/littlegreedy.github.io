@@ -387,498 +387,530 @@ var _hmt = _hmt || [];
   </div>
 </header>
 
-      <div class="blank" style="padding-top: 0px;"></div>
-<div id="content" class="site-content">
+        <div class="pattern-center-blank"></div>
   
-  <div class="notice" style="margin-top:60px">
-    <i class="iconfont icon-notification">
-    </i>
-    <div class="notice-content">你要做一个不动声色的大人了。不准情绪化，不准偷偷想念，不准回头看。去过自己另外的生活。</div>
-  </div>
-  
-  <div class="top-feature-row">
-  <h1 class="fes-title" style="font-family: 'Ubuntu', sans-serif;">
-  <i class="fa fa-anchor" aria-hidden="true">
-  </i>
-  聚焦</h1>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/theme-sakura/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/spring-1-1024x629.jpg">
-        </div>
-        <div class="info">
-          <h3>Sakura</h3>
-          <p>本站 hexo 主题</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="https://space.bilibili.com/19215863" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/imagesHH1.png">
-        </div>
-        <div class="info">
-          <h3>Bilibili</h3>
-          <p>博主的b站视频</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-  <div class="top-feature-v2">
-    <div class="the-feature square from_left_and_right">
-      <a href="/" target="_blank">
-        <div class="img">
-          <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/minecraft.jpg">
-        </div>
-        <div class="info">
-          <h3>我的世界</h3>
-          <p>我的世界唯一指定平台</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  
-</div>
-  <div id="primary" class="content-area">
-    <main id="main" class="site-main" role="main">
-      <h1 class="main-title" style="font-family: 'Ubuntu', sans-serif;">
-      <i class="fa fa-envira" aria-hidden="true"></i>
-      Discovery</h1>
+  <div id="content" class="site-content">
+    <article class="post-item post-301 page type-page status-publish has-post-thumbnail hentry">
+      <!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+	  <title>Echarts</title>
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/echarts@4.2.1/dist/echarts.js"></script>
+<script src="https://gallerybox.echartsjs.com/dep/echarts/map/js/china.js"></script>
+ 
+
+</head>
+
+    <body>
+	 <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+ <div id="main3" style="width: 1440px;height:1080px;"></div>
+	 
+    <div id="main2" style="width: 700px;height:560px;float:right;"></div>
+<div id="main" style="width: 700px;height:560px;float:right;"></div>
+	
+	
+    <script type="text/javascript">
+      // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+		
+		  // 指定图表的配置项和数据
+option = {
+    backgroundColor: '#2c343c',
+    visualMap: {
+        show: false,
+        min: 80,
+        max: 600,
+        inRange: {
+            colorLightness: [0, 1]
+        }
+    },
+    series : [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: '55%',
+            data:[
+                {value:80.15, name:'恶性肿瘤'},
+                {value:200, name:'肝硬化'},
+                {value:211, name:'冠心病'},
+                {value:350, name:'高血压'},
+				{value:362.85, name:'糖尿病'},
+                {value:390.3, name:'慢性气管炎'}
+            ],
+            roseType: 'angle',
+            label: {
+                normal: {
+                    textStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    lineStyle: {
+                        color: 'rgba(255, 255, 255, 0.3)'
+                    }
+                }
+            },
+            itemStyle: {
+                normal: {
+                    color: '#c23531',
+                    shadowBlur: 200,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+ // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+		
+
+    </script>
+
+<script type="text/javascript">
+		
+ // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main2'));
+		n=500;
+
+		option = {
+    backgroundColor:"#2c343c",
+	//"#0B1837",
+    color: ["#EAEA26", "#906BF9", "#FE5656", "#01E17E", "#3DD1F9", "#FFAD05"],
+    // title: {
+    //     text: '网络/安全设备',
+    //     left: '60',
+    //     top: 0,
+    //     textAlign: 'center',
+    //     textStyle: {
+    //         color: '#fff',
+    //         fontSize: 14,
+    //         fontWeight: 0
+    //     }
+    // },
+    grid: {
+        left: -100,
+        top: 50,
+        bottom: 10,
+        right: 10,
+        containLabel: true
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: "{b} : {c} ({d}%)"
+    },
+    legend: {
+        type: "scroll",
+        orient: "vartical",
+        // x: "right",
+        top: "center",
+        right: "15",
+        // bottom: "0%",
+        itemWidth: 16,
+        itemHeight: 8,
+        itemGap: 16,
+        textStyle: {
+            color: '#A3E2F4',
+            fontSize: 12,
+            fontWeight: 0
+        },
+        data: ['IDS', 'VPN', '交换机', '防火墙', 'WAF', '堡垒机']
+    },
+    polar: {},
+    angleAxis: {
+        interval: 1,
+        type: 'category',
+        data: [],
+        z: 10,
+        axisLine: {
+            show: false,
+            lineStyle: {
+                color: "#0B4A6B",
+                width: 1,
+                type: "solid"
+            },
+        },
+        axisLabel: {
+            interval: 0,
+            show: true,
+            color: "#0B4A6B",
+            margin: 8,
+            fontSize: 16
+        },
+    },
+    radiusAxis: {
+        min: 40,
+        max: 120,
+        interval: 20,
+        axisLine: {
+            show: false,
+            lineStyle: {
+                color: "#0B3E5E",
+                width: 1,
+                type: "solid"
+            },
+        },
+        axisLabel: {
+            formatter: '{value} %',
+            show: false,
+            padding: [0, 0, 20, 0],
+            color: "#0B3E5E",
+            fontSize: 16
+        },
+        splitLine: {
+            lineStyle: {
+                color: "#0B3E5E",
+                width: 2,
+                type: "solid"
+            }
+        }
+    },
+    calculable: true,
+    series: [{
+        type: 'pie',
+        radius: ["5%", "10%"],
+        hoverAnimation: false,
+        labelLine: {
+            normal: {
+                show: false,
+                length: 30,
+                length2: 55
+            },
+            emphasis: {
+                show: false
+            }
+        },
+        data: [{
+            name: '',
+            value: 0,
+            itemStyle: {
+                normal: {
+                    color: "#0B4A6B"
+                }
+            }
+        }]
+    }, {
+        type: 'pie',
+        radius: ["90%", "95%"],
+        hoverAnimation: false,
+        labelLine: {
+            normal: {
+                show: false,
+                length: 30,
+                length2: 55
+            },
+            emphasis: {
+                show: false
+            }
+        },
+        name: "",
+        data: [{
+            name: '',
+            value: 0,
+            itemStyle: {
+                normal: {
+                    color: "#0B4A6B"
+                }
+            }
+        }]
+    },{
+        stack: 'a',
+        type: 'pie',
+        radius: ['20%', '80%'],
+        roseType: 'area',
+        zlevel:10,
+        label: {
+            normal: {
+                show: true,
+                formatter: "{c}",
+                textStyle: {
+                    fontSize: 12,
+                },
+                position: 'outside'
+            },
+            emphasis: {
+                show: true
+            }
+        },
+        labelLine: {
+            normal: {
+                show: true,
+                length: 20,
+                length2: 55
+            },
+            emphasis: {
+                show: false
+            }
+        },
+		
+	
+               
+                
+               
+				
+			
+        data: [	{value:80.15/n, name:'恶性肿瘤'},
+            {value:200/n, name:'肝硬化'},
+            {value:211/n, name:'冠心病'},
+            {value:350/n, name:'高血压'},
+            {value:362.85/n, name:'糖尿病'},
+            {value:0.7806, name:'慢性气管炎'}
+        ]
+    }, ]
+}
+myChart.setOption(option);
+
+
+
+ </script>
+
+        <script type="text/javascript">
+
+            var myChart = echarts.init(document.getElementById('main3'));
+
+	var chinaGeoCoordMap = {
+		
+		'南京': [118.78,32.04],
+		'南昌':[115.89,28.68],
+		'淮安': [119.15,33.5],
+		'郑州':[113.65,34.76],
+		'上海': [121.4648, 31.2891]
+	};
+	var chinaDatas = [
+	        [{name: '南京', value: 1}],
+	        [{name: '淮安', value: 0}],
+			[{name: '南昌', value: 0}],
+		    [{name: '郑州', value: 0}],
+			[{
+			name: '上海',
+			value: 0
+		}]
+	];
+	var convertData = function(data) {
+		var res = [];
+		for(var i = 0; i < data.length; i++) {
+			var dataItem = data[i];
+			var fromCoord = chinaGeoCoordMap[dataItem[0].name];
+			var toCoord = [118.78,32.04];
+			if(fromCoord && toCoord) {
+				res.push([{
+					coord: fromCoord,
+					value: dataItem[0].value
+				}, {
+					coord: toCoord,
+				}]);
+			}
+		}
+		return res;
+	};
+	var series = [];
+	[['南京', chinaDatas]].forEach(function(item, i) {
+	    console.log(item)
+		series.push({
+				type: 'lines',
+				zlevel: 2,
+				effect: {
+					show: true,
+					period: 4, //箭头指向速度，值越小速度越快
+					trailLength: 0.02, //特效尾迹长度[0,1]值越大，尾迹越长重
+					symbol: 'arrow', //箭头图标
+					symbolSize: 5, //图标大小
+				},
+				lineStyle: {
+					normal: {
+						width: 1, //尾迹线条宽度
+						opacity: 1, //尾迹线条透明度
+						curveness: .3 //尾迹线条曲直度
+					}
+				},
+				data: convertData(item[1])
+			}, {
+				type: 'effectScatter',
+				coordinateSystem: 'geo',
+				zlevel: 2,
+				rippleEffect: { //涟漪特效
+					period: 4, //动画时间，值越小速度越快
+					brushType: 'stroke', //波纹绘制方式 stroke, fill
+					scale: 4 //波纹圆环最大限制，值越大波纹越大
+				},
+				label: {
+					normal: {
+						show: true,
+						position: 'right', //显示位置
+						offset: [5, 0], //偏移设置
+						formatter: function(params){//圆环显示文字
+							return params.data.name;
+						},
+						fontSize: 13
+					},
+					emphasis: {
+						show: true
+					}
+				},
+				symbol: 'circle',
+				symbolSize: function(val) {
+					return 10+ val[2] * 5; //圆环大小
+				},
+				itemStyle: {
+					normal: {
+						show: false,
+						color: '#f00'
+					}
+				},
+				data: item[1].map(function(dataItem) {
+					return {
+						name: dataItem[0].name,
+						value: chinaGeoCoordMap[dataItem[0].name].concat([dataItem[0].value])
+					};
+				}),
+			},
+			//被攻击点
+			{
+				type: 'scatter',
+				coordinateSystem: 'geo',
+				zlevel: 2,
+				rippleEffect: {
+					period: 4,
+					brushType: 'stroke',
+					scale: 4
+				},
+				label: {
+					normal: {
+						show: true,
+						position: 'right',
+						//offset:[5, 0],
+						color: '#0f0',
+						formatter: '{b}',
+						textStyle: {
+							color: "#0f0"
+						}
+					},
+					emphasis: {
+						show: true,
+						color: "#f60"
+					}
+				},
+				symbol: 'pin',
+				symbolSize: 50,
+				data: [{
+					name: item[0],
+					value: chinaGeoCoordMap[item[0]].concat([10]),
+				}],
+			}
+		);
+	});
+
+	option = {
+		tooltip: {
+			trigger: 'item',
+			backgroundColor: 'rgba(166, 200, 76, 0.82)',
+			borderColor: '#FFFFCC',
+			showDelay: 0,
+			hideDelay: 0,
+			enterable: true,
+			transitionDuration: 0,
+			extraCssText: 'z-index:100',
+			formatter: function(params, ticket, callback) {
+				//根据业务自己拓展要显示的内容
+				var res = "";
+				var name = params.name;
+				var value = params.value[params.seriesIndex + 1];
+				res = "<span style='color:#fff;'>" + name + "</span><br/>数据：" + value;
+				return res;
+			}
+		},
+		backgroundColor:"#013954",
+		visualMap: { //图例值控制
+			min: 0,
+			max: 1,
+			calculable: true,
+			show: true,
+			color: ['#f44336', '#fc9700', '#ffde00', '#ffde00', '#00eaff'],
+			textStyle: {
+				color: '#fff'
+			}
+		},
+		geo: {
+			map: 'china',
+			zoom: 1.2,
+			label: {
+				emphasis: {
+					show: false
+				}
+			},
+			roam: true, //是否允许缩放
+			itemStyle: {
+				normal: {
+					color: 'rgba(51, 69, 89, .5)', //地图背景色
+					borderColor: '#516a89', //省市边界线00fcff 516a89
+					borderWidth: 1
+				},
+				emphasis: {
+					color: 'rgba(37, 43, 61, .5)' //悬浮背景
+				}
+			}
+		},
+		series: series
+	};
+	
+	
+myChart.setOption(option);
+			
+
+        </script>
+		<p style="color: #666666;">&copy 2019 Made with 💗 by littleGreedy</p>
+
+
+    </body>
+
+</html>
+      <!-- .entry-content -->
       
-  <!-- 首页默认取最最新文章集 -->
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "U0OpCnjhIuuQ0SBtTbBM8Edm-MdYXbMMI",
+        appKey: "RtTu6xIboGekWhDbViDrCM6v",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+		avatar:'' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
+      })
+  }
+</script>
 
-  <div class="post-thumb">
-    <a href="/201908undefinedECharts/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/Echarts/27bad6039245d6885597b584aac27d1ed31b24c4.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-26 21:08</div>
-      <a href="/201908undefinedECharts/" class="post-title">
-        <h3>图表工具ECharts</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>一款你必不可少的前端数据可视化工具</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedECharts/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+      <footer class="post-footer">
+        <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+        <div class="post-tags">
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedintern3/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/30.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-20 10:08</div>
-      <a href="/201908undefinedintern3/" class="post-title">
-        <h3>水果葡萄</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/成长/">成长<em>·</em></a>
-          
-            <a href="/tags/实习/">实习<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/生活/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>小实习生（四）</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedintern3/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+        <div class="post-share">
+          <div class="social-share sharehidden share-component"></div>
+          <i class="iconfont show-share icon-forward"></i>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedlinux/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/images1.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-19 23:08</div>
-      <a href="/201908undefinedlinux/" class="post-title">
-        <h3>Linux安装到配置</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>记录失足掉落并爬出来的坑</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedlinux/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
+      </footer><!-- .entry-footer -->
+    </article>
+      <!-- #post-## -->
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="/about/" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/23.jpg" itemprop="image" alt="littleGreedy" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://littlezero.top" itemprop="url" rel="author">littleGreedy</a>
+            </h3>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedintern3-0/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/20140709013658_kuPXv.jpeg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-19 16:08</div>
-      <a href="/201908undefinedintern3-0/" class="post-title">
-        <h3>意义的所在</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/成长/">成长<em>·</em></a>
-          
-            <a href="/tags/实习/">实习<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/生活/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>小实习生（三）</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedintern3-0/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedTencent/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/scenery100.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-18 14:08</div>
-      <a href="/201908undefinedTencent/" class="post-title">
-        <h3>一条命令开QQ对话//内附web端打开本地exe方法</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/菜谱系列/">菜谱系列<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/技术/">技术</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>使用QQ以及可嵌入的本地应用程序打开方式</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedTencent/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedMaze1/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/A107.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-17 22:08</div>
-      <a href="/201908undefinedMaze1/" class="post-title">
-        <h3>迷宫题解--栈</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/算法/">算法</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>数据结构迷宫问题，2019年蓝桥杯考察题型</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedMaze1/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedgiftsummer/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/scenery13.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-15 22:08</div>
-      <a href="/201908undefinedgiftsummer/" class="post-title">
-        <h3>GIFT_summer</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/资源/">资源</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>叮！这里有一份礼物请签收</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedgiftsummer/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedintern2/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/wallpaper/g1.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-15 21:08</div>
-      <a href="/201908undefinedintern2/" class="post-title">
-        <h3>身影和夏天</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/成长/">成长<em>·</em></a>
-          
-            <a href="/tags/实习/">实习<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/生活/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>小实习生（二）</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedintern2/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb post-list-thumb-left"  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedlinkedList/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/5.jpg">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-14 22:08</div>
-      <a href="/201908undefinedlinkedList/" class="post-title">
-        <h3>链表——多项式加法</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/笔记/">笔记<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/算法/">算法</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p></p>
-        <div class="post-bottom">
-          <a href="/201908undefinedlinkedList/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-    
-<article  class="post post-list-thumb" itemscope="" itemtype="http://schema.org/BlogPosting">
-
-  <div class="post-thumb">
-    <a href="/201908undefinedintern/">
-      <img class="lazyload" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/0.png">
-    </a>
-  </div>
-  <div class="post-content-wrap">
-    <div class="post-content">
-      <div class="post-date">
-        <i class="iconfont icon-time">
-        </i>2019-8-13 15:08</div>
-      <a href="/201908undefinedintern/" class="post-title">
-        <h3>风起雨时</h3>
-      </a>
-      <div class="post-meta">
-        <span><i class="fa fa-tags"></i>
-        
-            <a href="/tags/成长/">成长<em>·</em></a>
-          
-            <a href="/tags/实习/">实习<em>·</em></a>
-          
-        </span>
-        <span>
-          <i class="iconfont icon-file"></i>
-          
-            <a href="/categories/生活/">生活</a>
-          
-        </span>
-      </div>
-      <div class="float-content">
-        <p>小实习生（一）</p>
-        <div class="post-bottom">
-          <a href="/201908undefinedintern/" class="button-normal">
-            <i class="iconfont icon-caidan"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-  
-
-
-    </main>
-      <!-- 首页默认取最最新文章集 -->
-    <!-- 
-      <nav class="navigator">
-        
-        <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="iconfont icon-right"></i></a>
-      </nav>
-     -->
-  </div>
-  
-    <div id="pagination"><a href="/page/2/" class="">Previous</a></div>
-  
+        <hr>
+        <p><i class="iconfont icon-write"></i>似乎每个人都分配好了角色，按照剧本的发展表演</p>
+      </section>
+  </div><!-- #primary -->
 </div>
-
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>
