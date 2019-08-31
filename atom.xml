@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-08-27T12:06:33.324Z</updated>
+  <updated>2019-08-31T03:36:27.887Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,53 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>B计划Win10设计</title>
+    <link href="/201908undefinedWin10PlanB/"/>
+    <id>/201908undefinedWin10PlanB/</id>
+    <published>2019-08-31T03:35:15.000Z</published>
+    <updated>2019-08-31T03:36:27.887Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;Windows 10 自带微软拼音输入法繁体简体切换快捷键&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;快捷键是：Ctrl + Shift +
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>梳理基于Hexo搭建博客的原理</title>
+    <link href="/201908undefinedwhat-is-Hexo/"/>
+    <id>/201908undefinedwhat-is-Hexo/</id>
+    <published>2019-08-31T03:31:07.000Z</published>
+    <updated>2019-08-31T09:34:44.266Z</updated>
+    
+    <summary type="html">
+    
+      Nice
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
+    
+      <category term="Web前端" scheme="/tags/Web%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>图表工具ECharts</title>
@@ -287,9 +334,9 @@ struct PolyNode {
       <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
-      <category term="hexo" scheme="/tags/hexo/"/>
-    
       <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
     
   </entry>
   
