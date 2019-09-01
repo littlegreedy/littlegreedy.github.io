@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-08-31T03:36:27.887Z</updated>
+  <updated>2019-09-01T12:06:10.475Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,22 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>isprime</title>
+    <link href="/20190901isprime/"/>
+    <id>/20190901isprime/</id>
+    <published>2019-09-01T12:06:10.000Z</published>
+    <updated>2019-09-01T12:06:10.475Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>B计划Win10设计</title>
@@ -315,6 +331,24 @@ struct PolyNode {
     
     
       <category term="hexo" scheme="/tags/hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>欧几里德算法（最大公约数算法）</title>
+    <link href="/20190811gcd/"/>
+    <id>/20190811gcd/</id>
+    <published>2019-08-11T09:38:17.000Z</published>
+    <updated>2019-09-01T12:03:19.793Z</updated>
+    
+    <summary type="html">
+    
+      ACM基知
+    
+    </summary>
+    
+      <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
+    
     
   </entry>
   
