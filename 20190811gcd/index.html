@@ -410,6 +410,7 @@ var _hmt = _hmt || [];
 <pre><code class="c">//功能：利用欧几里德算法，求整数a，b的最大公约数
 //参数：整数a，b
 //返回：a,b的最大公约数
+1.
 int gcd(int a,int b){
 
     if(a&lt;b){//保证a大于等于b，便于a%b的运算
@@ -425,6 +426,30 @@ int gcd(int a,int b){
     }
     return b;
 }
+</code></pre>
+<p>更简洁的形式：</p>
+<pre><code class="c++">2.
+int gcd(int a,int b)///位运算
+{  
+    while(b^=a^=b^=a%=b);  
+    return a;  
+}  
+
+
+3.
+int gcd(int a,int b)///递归调用
+{
+    if(b==0)
+    {
+        return a;
+    }
+    gcd(b,a%b);
+}
+
+4.
+#include&lt;algorithm&gt;///直接使用c++的内置函数
+using namespace std;
+__gcd(int a,int b)
 </code></pre>
 
         </div>

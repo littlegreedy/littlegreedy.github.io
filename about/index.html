@@ -576,11 +576,11 @@ function bot_ui_ini() {
         secondpart = function () {
             botui.message.add({
                 delay: 1500,
-                content: "一个ACMer~ 比Oier蒻一大截的那种"
+                content: "向往技术"
             }).then(function () {
                 botui.message.add({
                     delay: 1500,
-                    content: "向往技术，偶尔折腾些新花样…"
+                    content: "偶尔折腾些新花样…"
                 }).then(function () {
                     botui.message.add({
                         delay: 1200,
@@ -592,25 +592,21 @@ function bot_ui_ini() {
                         }).then(function () {
                             botui.message.add({
                                 delay: 1500,
-                                content: "折腾的方向，是 Web前端（front-end ）以及人工智能（artificial intelligence）"
+                                content: "折腾的方向，是 Web前端（front-end ）以及人工智能（artificial intelligence）"								
 							}).then(function () {
 								botui.message.add({
-									delay: 600,
-									content: "![...](https://raw.githubusercontent.com/littlegreedy/zero/master/images/wallpaper/web.png)"
-									}).then(function () {
-										botui.message.add({
-											delay: 1800,
-											content: "喜欢画画，希望有一天能够被称为画师"
-										}).then(function () {
-											botui.action.button({
-												delay: 1100,
-												action: [{
-													text: "为什么叫littlezero呢？ 🤔",
-													value: "why-littlezero"
-											}]
-										}).then(function (a) {
+									delay: 1800,
+									content: "喜欢画画，希望有一天能够被称为画师"
+								}).then(function () {
+									botui.action.button({
+										delay: 1100,
+										action: [{
+											text: "为什么叫littlezero呢？ 🤔",
+											value: "why-littlezero"
+									}]
+								}).then(function (a) {
 											thirdpart()
-										})
+										
 									})	
                                 })
                             })
@@ -622,7 +618,7 @@ function bot_ui_ini() {
         thirdpart = function () {
             botui.message.add({
                 delay: 1E3,
-                content: "零号来自一本书里的角色，因为每次对其出场都欢喜不已，便取littlezero小零号为名~ 如果有兴趣可以找找首页上的视频~"
+                content: "零号来自一本书里的角色，因为每次对其出场都惊喜不已，遂取littlezero小零号为名~ "
             }).then(function () {
                 botui.action.button({
                     delay: 1500,
@@ -642,7 +638,7 @@ function bot_ui_ini() {
             }).then(function () {
                 botui.message.add({
                     delay: 1300,
-                    content: "大一下学期开学的时候刷《啊哈！算法》，最后学到树便停下来了，而停下来的下一章就是贪心：“局部代整体，贪婪地选取最优解"
+                    content: "贪心有个经典的概念：“局部代整体，选取最优解"
                 }).then(function () {
                     botui.action.button({
                         delay: 1500,
@@ -672,7 +668,7 @@ bot_ui_ini()
 </script>
 
 <p></p>
-<center><span style="color: #c5c5c5;">Last updated in&nbsp;Aug. 24th, 2019</span></center>
+<center><span style="color: #c5c5c5;">Last updated in&nbsp;Sep. 1st, 2019</span></center>
 <p></p>
 
 
@@ -683,7 +679,10 @@ bot_ui_ini()
 <p></p>
 <br>
 
-2019/8/25 <a href="http://47.103.63.150" target="_blank" rel="noopener">我的小情绪WordPress博客</a>极简上线；
+2019/8/31 小情绪博客正式使用<a href="https://wordpress.org/themes/yuuta/" target="_blank" rel="noopener">Yuuta</a>;
+<br>
+
+2019/8/25 <a href="http://47.103.63.150" target="_blank" rel="noopener">小情绪WordPress博客</a>上线；
 
 <br>
 
