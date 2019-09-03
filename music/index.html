@@ -443,13 +443,22 @@ var _hmt = _hmt || [];
         <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/other/disqus-preloader.svg">
       </div>
-      <p style="color: #666666;">&copy 2019 Made with 💗 by littleGreedy</p>
-	  <i class="fa fa-user"></i>
-		<span id="busuanzi_container_site_pv" style="display: inline;">
-		<span id="busuanzi_value_site_pv"></span> |
-		 <i class="fa fa-eye"></i>
+	   
+	<p class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></p> 
+       
+	   
+	   <i class="fa fa-user"></i>
 		<span id="busuanzi_container_site_uv" style="display: inline;">
-		<span id="busuanzi_value_site_uv"></span> 
+		<span id="busuanzi_value_site_uv"></span> |
+		<i class="fa fa-eye"></i>
+		<span id="busuanzi_container_site_pv" style="display: inline;">
+		<span id="busuanzi_value_site_pv"></span> 
+		<p class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></p> 
+		
+		
+	 <!--  <p style="color: #666666;">&copy 2019 Made with 馃挆 by littleGreedy</p>-->
+     
+		
 		<!-- | <span class="post-count">{{ totalcount(site) }}</span> -->
     </div>
 	
@@ -457,23 +466,23 @@ var _hmt = _hmt || [];
 	
 
 	<div align="center">
-            <span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
-            <script>
-                var now = new Date(); 
-                function createtime() { 
-                    var grt= new Date("7/23/2019 20:00:00");//此处修改你的建站时间或者网站上线时间 
-                    now.setTime(now.getTime()+250); 
-                    days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
-                    hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
-                    if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
-                    mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
-                    seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
-                    snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
-                    document.getElementById("timeDate").innerHTML = "博客已悄悄运行 "+dnum+" 天 "; 
-                    document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
-                } 
-            setInterval("createtime()",250);
-            </script>
+		<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+		<script>
+			var now = new Date(); 
+			function createtime() { 
+				var grt= new Date("7/23/2019 20:00:00");//在此处修改你的建站时间
+				now.setTime(now.getTime()+250); 
+				days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+				hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+				if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+				mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+				seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+				snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+				document.getElementById("timeDate").innerHTML = "博客已悄悄运行 "+dnum+" 天 "; 
+				document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+			} 
+			setInterval("createtime()",250);
+	</script>
             
         </div>
 		
@@ -483,9 +492,11 @@ var _hmt = _hmt || [];
 		
     <div class="footer-device">
     <p style="font-family: 'Ubuntu', sans-serif;">
-        <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo</a>
+      <!--  <span style="color: #b9b9b9;">Theme <a href="https://github.com/honjun/hexo-theme-sakura" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Sakura</a> <i class="iconfont icon-sakura rotating" style="color: #ffc0cb;display:inline-block"></i> by <a href="https://2heng.xin/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Mashiro</a>&<a href="https://www.hojun.cn/" target="_blank" style="color: #b9b9b9;;text-decoration: underline dotted rgba(0, 0, 0, .1);">Hojun</a>, Powered by Hexo</a> -->
         </span>
-      </p>
+      </p> 
+	  <p style="font-family: "PingFang SC","Microsoft YaHei",Lato,sans-serif;">
+		 <span style="color: #666666;">&copy 2019  💗  LittleGreedy. 苏ICP备19047741号.</span></p>
 	  <img style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;" alt="github" src="https://yremp.live/wp-content/uploads/2019/07/Github.png">
 	  
 	   <img style="height: 2.2em; max-height: 2.5em;padding-bottom: 0px;" alt="github" src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/images/intern/f.png">
@@ -506,7 +517,7 @@ var _hmt = _hmt || [];
 
 <script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
 
-<!-- 涓嶈挏瀛?缃戦〉璁℃暟鍣?-->
+<!-- 娑撳秷鎸忕€?缂冩垿銆夌拋鈩冩殶閸?-->
 <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
 <script type="text/javascript">
@@ -522,22 +533,22 @@ if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
 <script>
 $(document).ready(function() {
   if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
-    if ($(".pattern-center").length > 0) { //鏈夊浘鐨勬儏鍐?      tocbot.init({
+    if ($(".pattern-center").length > 0) { //閺堝娴橀惃鍕剰閸?      tocbot.init({
           // Where to render the table of contents.
-          tocSelector: '.toc', // 鏀剧疆鐩綍鐨勫鍣?          // Where to grab the headings to build the table of contents.
-          contentSelector: '.entry-content', // 姝ｆ枃鍐呭鎵€鍦?          // Which headings to grab inside of the contentSelector element.
+          tocSelector: '.toc', // 閺€鍓х枂閻╊喖缍嶉惃鍕啇閸?          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 濮濓絾鏋冮崘鍛啇閹碘偓閸?          // Which headings to grab inside of the contentSelector element.
           scrollSmooth: true,
-          headingSelector: 'h1, h2, h3, h4, h5', // 闇€瑕佺储寮曠殑鏍囬绾у埆
+          headingSelector: 'h1, h2, h3, h4, h5', // 闂団偓鐟曚胶鍌ㄥ鏇犳畱閺嶅洭顣界痪褍鍩?
           headingsOffset: -400,
           scrollSmoothOffset: -85
       });
     } else {
       tocbot.init({
           // Where to render the table of contents.
-          tocSelector: '.toc', // 鏀剧疆鐩綍鐨勫鍣?          // Where to grab the headings to build the table of contents.
-          contentSelector: '.entry-content', // 姝ｆ枃鍐呭鎵€鍦?          // Which headings to grab inside of the contentSelector element.
+          tocSelector: '.toc', // 閺€鍓х枂閻╊喖缍嶉惃鍕啇閸?          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 濮濓絾鏋冮崘鍛啇閹碘偓閸?          // Which headings to grab inside of the contentSelector element.
           scrollSmooth: true,
-          headingSelector: 'h1, h2, h3, h4, h5', // 闇€瑕佺储寮曠殑鏍囬绾у埆
+          headingSelector: 'h1, h2, h3, h4, h5', // 闂団偓鐟曚胶鍌ㄥ鏇犳畱閺嶅洭顣界痪褍鍩?
           headingsOffset: -85,
           scrollSmoothOffset: -85
       });
