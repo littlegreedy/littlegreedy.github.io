@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-05T15:58:14.367Z</updated>
+  <updated>2019-09-07T09:20:07.086Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,46 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>计算机系统基础学习笔记第一周</title>
+    <link href="/20190907system/"/>
+    <id>/20190907system/</id>
+    <published>2019-09-07T09:14:10.000Z</published>
+    <updated>2019-09-07T09:20:07.086Z</updated>
+    
+    <summary type="html">
+    
+      引言
+    
+    </summary>
+    
+      <category term="笔记" scheme="/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="计算机系统" scheme="/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>计算机组成原理学习笔记第一周</title>
+    <link href="/20190906compterorganization/"/>
+    <id>/20190906compterorganization/</id>
+    <published>2019-09-06T06:07:10.000Z</published>
+    <updated>2019-09-07T09:19:40.679Z</updated>
+    
+    <summary type="html">
+    
+      如何实现计算机体系结构所体现的属性
+    
+    </summary>
+    
+      <category term="笔记" scheme="/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="计组" scheme="/tags/%E8%AE%A1%E7%BB%84/"/>
+    
+  </entry>
   
   <entry>
     <title>B计划Win10设计</title>
@@ -46,7 +86,7 @@
     <link href="/20190831what-is-Hexo/"/>
     <id>/20190831what-is-Hexo/</id>
     <published>2019-08-31T03:31:07.000Z</published>
-    <updated>2019-08-31T09:34:44.266Z</updated>
+    <updated>2019-09-07T09:22:10.594Z</updated>
     
     <summary type="html">
     
@@ -59,7 +99,7 @@
     
       <category term="hexo" scheme="/tags/hexo/"/>
     
-      <category term="Web前端" scheme="/tags/Web%E5%89%8D%E7%AB%AF/"/>
+      <category term="Web" scheme="/tags/Web/"/>
     
   </entry>
   
@@ -82,11 +122,11 @@
   </entry>
   
   <entry>
-    <title>办公室=操场</title>
+    <title>一年级好玩吗</title>
     <link href="/20190820intern3/"/>
     <id>/20190820intern3/</id>
     <published>2019-08-20T02:26:06.000Z</published>
-    <updated>2019-09-05T16:04:41.602Z</updated>
+    <updated>2019-09-07T09:23:20.999Z</updated>
     
     <summary type="html">
     
@@ -395,28 +435,6 @@ struct PolyNode {
       <category term="观后感" scheme="/tags/%E8%A7%82%E5%90%8E%E6%84%9F/"/>
     
       <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo-Theme-Sakura</title>
-    <link href="/20181212Hexo-Theme-Sakura/"/>
-    <id>/20181212Hexo-Theme-Sakura/</id>
-    <published>2018-12-12T14:16:01.000Z</published>
-    <updated>2019-06-01T14:21:46.000Z</updated>
-    
-    <summary type="html">
-    
-      hexo-sakura主题使用教程
-    
-    </summary>
-    
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
