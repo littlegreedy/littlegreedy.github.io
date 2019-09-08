@@ -410,9 +410,9 @@ struct PolyNode {
       <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
-      <category term="hexo" scheme="/tags/hexo/"/>
-    
       <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
+    
+      <category term="hexo" scheme="/tags/hexo/"/>
     
   </entry>
   
