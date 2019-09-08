@@ -420,17 +420,17 @@ var _hmt = _hmt || [];
 </li>
 </ul>
 <p>  <code></code></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>刚开始像所有人一样，我对照着攻略趟过无数坑最终把博客整出来了。在安装、配置、开发的过程中，免不了阅读官方文档，最初作为安装小白的我看的是英文的Docs（突如其来的大量web专业英语词汇真的影响进度），过了几天才发现有中文版。。。随着对Hexo理解的加深，知其然知其所以然，又对原理颇为好奇，直到后来搜了很多有关资料，对hexo有了些新的认识，就来梳理记录一下。</p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>刚开始像所有人一样，我对照着攻略趟过无数坑终于把博客给整出来了。在安装、配置、开发的过程中，免不了阅读官方文档，作为安装小白的我看了几天英文的Docs（突如其来的大量web专业英语词汇真的影响进度），后来才发现有中文版……随着对Hexo理解的加深，渐渐开始对原理好奇起来，我本着知其然知其所以然，搜了许多有关资料，现在对hexo有了些新的认识，就来梳理记录一下。</p>
+<p>首先需阐明的是本文用window系统为例，而有相当一部分Hexo是搭建在LNMP或LAMP环境下的，但这一切仅仅是物理存储位置发生了变化，原理依旧不变。</p>
+<p>LNMP指的是 linux+nginx+mysql+php，这是一款功能非常强大的环境套件，nginx以其轻量而高效受到建站者的青睐。补一句：apache是全球最受欢迎的web服务器端软件之一，广泛用于企业级建站。</p>
 <h1 id="Github-Pages"><a href="#Github-Pages" class="headerlink" title="Github Pages"></a>Github Pages</h1><p>Hexo搭建的博客项目源码托管在github，并享受github pages服务。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/Echarts/d5cff8e4e3ea3d7d64f8df829892a125.gif" alt></p>
 <p>​    GitHub pages简称pages服务，每个仓库都有一个pages服务，可用来展示项目，通过简单的设置项目的index.html，并以此做为入口供用户参观访问。可是一个相当实用的功能呀！大部分的 pages 服务都是用来搭建个人博客的。言外之意不仅能搭建博客，还能做些其他的事情~</p>
-<p style="background-color:rgba(239,221,236,0.7)"><img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/symbols/exclamation-mark.png">tips：pages设置中的custom domain，如你所见设置可供访问的定制域名</p>
-
+<p></p><p style="background-color:rgba(239,221,236,0.7)"><img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/symbols/exclamation-mark.png">tips：pages设置中的custom domain，如你所见设置可供访问的定制域名</p><p></p>
 <h3 id="为什么需要Pages技术"><a href="#为什么需要Pages技术" class="headerlink" title="为什么需要Pages技术"></a>为什么需要Pages技术</h3><p>生成博客的页面有动、静态页面之分</p>
 <p>著名的博客 wordpress ，既是<a href="https://baike.baidu.com/item/动态网页/6327050?fromtitle=%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2&amp;fromid=8586386" target="_blank" rel="noopener"><strong>动态</strong></a>页面生成的博客，其思路是 php + MySql 。</p>
 <p>博客hexo生成的是<a href="https://baike.baidu.com/item/动态网页/6327050?fromtitle=%E5%8A%A8%E6%80%81%E9%A1%B5%E9%9D%A2&amp;fromid=8586386" target="_blank" rel="noopener"><strong>静态</strong></a>页面，而Github pages 又支持静态页面的解析。因此二者一拍即合能够用来生成 html 拼合成博客。</p>
-<p style="background-color:rgba(219,233,243,0.7)"><img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/symbols/double-exclamation-mark.png">静态页面意味着评论、分享等功能得依赖于第三方插件，但它所带来的轻量、高效是动态页面所不及的</p>
-
+<p></p><p style="background-color:rgba(219,233,243,0.7)"><img class="emoji-hj" src="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/emojis/symbols/double-exclamation-mark.png">静态页面意味着评论、分享等功能得依赖于第三方插件，但它所带来的轻量、高效是动态页面所不及的</p><p></p>
 <h1 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h1><p>从上面我们了解到 Hexo 是用来生成 HTML 的，那么这章我们就主要来讲一下 Hexo 是怎样生成 HTML 的。</p>
 <h3 id="什么是Hexo"><a href="#什么是Hexo" class="headerlink" title="什么是Hexo"></a>什么是Hexo</h3><hr>
 <p>在官网中Hexo被介绍为快速、简洁且高效的博客框架。</p>
