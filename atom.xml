@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-07T09:29:54.294Z</updated>
+  <updated>2019-09-13T14:31:03.613Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>计算机组成原理学习笔记第二周</title>
+    <link href="/20190913computerorganization2/"/>
+    <id>/20190913computerorganization2/</id>
+    <published>2019-09-13T14:03:18.000Z</published>
+    <updated>2019-09-13T14:31:03.613Z</updated>
+    
+    <summary type="html">
+    
+      计算机总线设计
+    
+    </summary>
+    
+      <category term="笔记" scheme="/categories/%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="计组" scheme="/tags/%E8%AE%A1%E7%BB%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>计算机系统基础学习笔记第一周</title>
     <link href="/20190907system/"/>
     <id>/20190907system/</id>
     <published>2019-09-07T09:14:10.000Z</published>
-    <updated>2019-09-07T09:29:54.294Z</updated>
+    <updated>2019-09-13T14:33:02.344Z</updated>
     
     <summary type="html">
     
@@ -41,7 +61,7 @@
     <link href="/20190906compterorganization/"/>
     <id>/20190906compterorganization/</id>
     <published>2019-09-06T06:07:10.000Z</published>
-    <updated>2019-09-07T09:19:40.679Z</updated>
+    <updated>2019-09-13T14:33:39.072Z</updated>
     
     <summary type="html">
     
@@ -413,28 +433,6 @@ struct PolyNode {
       <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
     
       <category term="hexo" scheme="/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Clannad</title>
-    <link href="/201908022019-08-02-cl/"/>
-    <id>/201908022019-08-02-cl/</id>
-    <published>2019-08-02T15:37:30.000Z</published>
-    <updated>2019-08-10T14:30:42.960Z</updated>
-    
-    <summary type="html">
-    
-      译作经典，读作人生
-    
-    </summary>
-    
-      <category term="悦读" scheme="/categories/%E6%82%A6%E8%AF%BB/"/>
-    
-    
-      <category term="观后感" scheme="/tags/%E8%A7%82%E5%90%8E%E6%84%9F/"/>
-    
-      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
     
   </entry>
   
