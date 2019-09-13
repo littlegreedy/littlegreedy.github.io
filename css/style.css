@@ -7466,7 +7466,7 @@ to {
     font-family:'Ubuntu',sans-serif
 }
 .serif {
-    font-family:'Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','SongTi SC','MicroSoft Yahei',Georgia,serif
+    font-family:'Noto Serif SC','Source Han Serif SC','Source Han Serif','source-han-serif-sc','PT Serif','SongTi SC','MicroSoft Yahei',Georgia,serif
 }
 @media(max-width:860px) {
     .serif {
