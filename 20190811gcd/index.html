@@ -418,13 +418,6 @@ var _hmt = _hmt || [];
 //返回：a,b的最大公约数
 1.
 int gcd(int a,int b){
-
-    if(a&lt;b){//保证a大于等于b，便于a%b的运算
-        int temp;
-        temp = b;
-        b = a;
-        a = temp;
-    }
     while(a%b){//如果余数不为0，就一直进行辗转相除
         int r = a % b;//r为a和b的余数，即r = a mod(b);
         a = b;
