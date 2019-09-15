@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/bangumi/index.html</loc>
+    
+    <lastmod>2019-09-15T07:59:38.236Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/booklist/index.html</loc>
     
     <lastmod>2019-09-15T05:53:42.725Z</lastmod>
@@ -12,13 +19,6 @@
     <loc>/about/index.html</loc>
     
     <lastmod>2019-09-14T08:23:53.591Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/bangumi/index.html</loc>
-    
-    <lastmod>2019-09-13T17:52:33.986Z</lastmod>
     
   </url>
   
@@ -233,7 +233,21 @@
   </url>
   
   <url>
-    <loc>/links/index.html</loc>
+    <loc>/rss/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/video/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/tags/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -241,13 +255,6 @@
   
   <url>
     <loc>/donate/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/rss/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -268,20 +275,6 @@
   </url>
   
   <url>
-    <loc>/tags/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/music/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/20181212Hexo-Theme-Sakura/</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
@@ -289,7 +282,14 @@
   </url>
   
   <url>
-    <loc>/video/index.html</loc>
+    <loc>/links/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/music/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
