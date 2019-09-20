@@ -4,7 +4,21 @@
   <url>
     <loc>/bangumi/index.html</loc>
     
-    <lastmod>2019-09-15T17:04:52.978Z</lastmod>
+    <lastmod>2019-09-20T16:15:33.206Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/links/index.html</loc>
+    
+    <lastmod>2019-09-20T16:08:34.842Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/lab/index.html</loc>
+    
+    <lastmod>2019-09-20T16:08:06.432Z</lastmod>
     
   </url>
   
@@ -68,13 +82,6 @@
     <loc>/20190831what-is-Hexo/</loc>
     
     <lastmod>2019-09-08T14:32:19.990Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/lab/index.html</loc>
-    
-    <lastmod>2019-09-08T06:34:31.471Z</lastmod>
     
   </url>
   
@@ -240,13 +247,6 @@
   </url>
   
   <url>
-    <loc>/tags/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/music/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
@@ -261,7 +261,7 @@
   </url>
   
   <url>
-    <loc>/video/index.html</loc>
+    <loc>/donate/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -275,14 +275,14 @@
   </url>
   
   <url>
-    <loc>/donate/index.html</loc>
+    <loc>/20181212Hexo-Theme-Sakura/</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>/20181212Hexo-Theme-Sakura/</loc>
+    <loc>/tags/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -296,7 +296,7 @@
   </url>
   
   <url>
-    <loc>/links/index.html</loc>
+    <loc>/video/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
