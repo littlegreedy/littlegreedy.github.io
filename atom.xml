@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-09-15T17:01:35.699Z</updated>
+  <updated>2019-09-26T15:36:54.553Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Git 问题贴</title>
+    <link href="/20190925git/"/>
+    <id>/20190925git/</id>
+    <published>2019-09-25T15:28:03.000Z</published>
+    <updated>2019-09-26T15:36:54.553Z</updated>
+    
+    <summary type="html">
+    
+      Git
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>【种树系列】中秋特辑之AvlTree</title>
@@ -413,24 +431,6 @@ struct PolyNode {
     
     
       <category term="hexo" scheme="/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>欧几里德算法（最大公约数算法）</title>
-    <link href="/20190811gcd/"/>
-    <id>/20190811gcd/</id>
-    <published>2019-08-11T09:38:17.000Z</published>
-    <updated>2019-09-15T16:53:26.330Z</updated>
-    
-    <summary type="html">
-    
-      ACM基知
-    
-    </summary>
-    
-      <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
-    
     
   </entry>
   
