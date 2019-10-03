@@ -439,6 +439,27 @@ var _hmt = _hmt || [];
 <p>5、<strong>信号线数</strong>：地址总线、数据总线和控制总线三种总线的总和</p>
 <p>6、<strong>总线控制方式</strong>：突发工作、自动配置、仲裁方式、逻辑方式、技术方式</p>
 <p>7、<strong>其他指标</strong>：负载能力、电源电压（5V还是3.3V）、总线宽度能否拓展</p>
+<h2 id="3-3-3、总线标准"><a href="#3-3-3、总线标准" class="headerlink" title="3.3.3、总线标准"></a>3.3.3、总线标准</h2><p>知道各总线用途</p>
+<h1 id="3-4、总线结构"><a href="#3-4、总线结构" class="headerlink" title="3.4、总线结构"></a>3.4、总线结构</h1><p>分为单总线和多总线结构</p>
+<h2 id="3-4-1、单总线结构"><a href="#3-4-1、单总线结构" class="headerlink" title="3.4.1、单总线结构"></a>3.4.1、单总线结构</h2><p>特点：<br>将CPU、主存、I/O设备（通过I/O接口）都挂在一组总线上，允许I/O设备之间、I/O设备与CPU之间或I/O设备与主存之间直接交换信息。</p>
+<p>用途：<br>小型或微型计算机</p>
+<p>改进：<br>为克服总线传输能力不高的情况，采用<strong>增加总线宽度和提高传输速率</strong>来解决</p>
+<h2 id="3-4-2、多总线结构"><a href="#3-4-2、多总线结构" class="headerlink" title="3.4.2、多总线结构"></a>3.4.2、多总线结构</h2><p>特点：<br>将速度较低的I/O设备从单总线上分离出来，形成主存总线与I/O总线分开的结构</p>
+<p>用途：<br>大、中型计算机系统</p>
+<p><strong>以下列举多个例子P53</strong></p>
+<ul>
+<li><strong>双总线结构</strong><br>主存总线和I/O总线通过<strong>处理器</strong>连接。<strong>处理器</strong>是具有特殊功能的处理器，由通道对I/O统一管理</li>
+<li><strong>三总线结构</strong><br>在三线结构中，任一时刻只能使用一种总线，主存总线与<strong>DMA总线</strong>不能同时对主存进行存取，I/O总线只有在CPU执行I/O指令时才能用到。<strong>DMA总线</strong>专连高速I/O设备 </li>
+<li><strong>三总线结构（二）</strong><br>因为CPU存取速度相当快，主存存取速度慢，故有CPU和Cache局部设备连接。同时添加扩展总线，解决I/O设备拓展问题，但影响了外设速度。</li>
+<li><strong>四总线结构</strong><br>增加一条与计算机系统紧密连接的高速总线，而拓展总线连接低速运转设备</li>
+</ul>
+<h2 id="3-4-3、总线结构举例"><a href="#3-4-3、总线结构举例" class="headerlink" title="3.4.3、总线结构举例"></a>3.4.3、总线结构举例</h2><p>从VL-BUS开始以下都是将高速、低速总线分开</p>
+<ul>
+<li>传统微型计算机的总线结构</li>
+<li>VL-BUS局部总线结构</li>
+<li>PCI总线结构</li>
+<li>多层PCI总线结构<br>当PCI总线驱动能力不足时，可采用多层结构  ，使用（PCI桥）</li>
+</ul>
 
         </div>
         <!-- .entry-content -->
@@ -470,7 +491,7 @@ var _hmt = _hmt || [];
           
             <a href="/20190916AvlTree/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/A464.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/A464.png">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/A692.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/A692.png">
               </div>
               <span class="label">
               Previous Post</span>

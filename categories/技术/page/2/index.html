@@ -7,7 +7,7 @@
   <script src="/js/src/click.js"></script>
  
   
-  <title itemprop="name">【种树系列】中秋特辑之AvlTree | 小贪心</title>
+  <title itemprop="name">Category: 技术 | 小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -359,227 +359,110 @@ var _hmt = _hmt || [];
   </div>
 </header>
 
-      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/honjun/hexo-tag-emojis-byhj/css/emoji.css">
-
-<div class="pattern-center-blank"></div>
-
-  <div class="pattern-center single-center">
-    <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/A692.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/A692.png">
-    </div>
-    <header class="pattern-header single-header">
-      <h1 class="entry-title">
-      【种树系列】中秋特辑之AvlTree</h1>
-      <p class="entry-census">
-        <span>
-          <a href="littlezero.top">
-            <img src="https://cdn.jsdelivr.net/gh/littlegreedy/littlegreedy.github.io@v1.30/img/head.jpg">
-          </a>
-        </span>
-        <span>
-          <a href="littlezero.top">littleGreedy</a>
-        </span>
-        <span class="bull">
-        ·</span>
-        2019-9-16<span class="bull">
-        ·</span>
       
-<link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
-<span id="busuanzi_value_page_pv"><i class="fa fa-spinner"></i></span> Hits</p>
-    </header>
+<div class="pattern-center-blank"></div>
+<div class="pattern-center ">
+  <div class="pattern-attachment-img">
+    <img data-src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg" class="lazyload" onerror="imgError(this,3)" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;">
   </div>
-
+  <header class="pattern-header ">
+    <h1 class="cat-title">野生&amp;技术协会</h1>
+    <span class="cat-des">
+      <p>Geek – Only for Love</p>
+    </span>
+  </header>
+</div>
 <div id="content" class="site-content">
   <div id="primary" class="content-area">
     <main id="main" class="site-main" role="main">
-      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
-        <div class="toc"></div>
-        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
-        
-        <div class="entry-content">
-          <pre><code class="C">
-/* This ADT can carry out major operations of AvlTree if you achieve the rest. */
-/* AvlTree was created to keep an ideal balance of tree height. */ 
-/* We all know that AvlTree major contains Single Rotation and Double Rotation. */  
-
-#define ElementType int
-
-typedef struct AvlNode *Position;
-typedef struct AvlNode *AvlTree;
-
-struct AvlNode{
-    ElementType Data;
-    AvlTree Left;
-    AvlTree Right;
-    int Height;
-};
-
-static int Height(Position P){
-    if(!P)    return -1;
-    else return P-&gt;Height;
-}
-
-int Max ( int a, int b )
-{
-    return a &gt; b ? a : b;
-}
-
-AvlTree Insert(ElementType X, AvlTree T){
-    if(!T){
-        T=malloc(sizeof(struct AvlNode));
-        if(!T)
-            FatalError(&quot;Out of space!!!&quot;);
-        else{
-            T-&gt;Data=X;
-            T-&gt;Height=0;
-            T-&gt;Left=T-&gt;Right=NULL;
-        }
-    }
-    else if(X&lt;T-&gt;Data){
-        T-&gt;Left=Insert(X,T-&gt;Left);
-        if(2 == (Height(T-&gt;Left)-Height(T-&gt;Right)))
-            if(X&lt;T-&gt;Left-&gt;Data)
-                T = SingleRotateWithLeft(T);
-            else
-                T = DoubleRotateWithLeft(T);            
-    }
-    else if(X&gt;T-&gt;Data){
-        T-&gt;Right=Insert(X,T-&gt;Right);
-        if(2 == (Height(T-&gt;Right)-Height(T-&gt;Left)))
-            if(X&gt;T-&gt;Right-&gt;Data)
-                T = SingleRotateWithRight(T);
-            else
-                T = DoubleRotateWithRight(T);
-    }
-    /*Else X is in the tree already; we&#39; ll do nothing*/
-
-    // don&#39;t forget to renew Height of AvlTree 
-    T-&gt;Height=Max(Height(T-&gt;Left),Height(T-&gt;Right)) + 1 ;
-    return T;
-}
-
-static Position SingleRotateWithLeft(Position B){
-    Position A;
-
-    /*ATree are dancing with BTree*/
-    A = B-&gt;Left;
-    B-&gt;Left = A-&gt;Right;
-    A-&gt;Right = B;
-
-    B-&gt;Height = Max(Height(B-&gt;Left),Height(B-&gt;Right))+1;
-    A-&gt;Height = Max(Height(A-&gt;Left),Height(A-&gt;Right))+1;
-
-    return A;   /*New root*/
-} 
-
-static Position DoubleRotateWithLeft(Position C){
-    /*Rotate between A and B */
-    C-&gt;Left = SingleRotateWithRight(C-&gt;Left);
-
-    /*Rotate between C and B */
-    return SingleRotateWithLeft(C);
-} 
-</code></pre>
-
-        </div>
-        <!-- .entry-content -->
-       
-        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
-        <footer class="post-footer">
-          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
-          <div class="post-tags">
-		<i class="iconfont icon-tags"></i> <a href="https://littlezero/tag/page.tag/" rel="tag">page.tag</a> 	
-		</div>
-		<div class="post-like">
-<a class="specsZan " href="javascript:;" data-id="594" data-action="ding">
-	<i class="iconfont icon-like"></i> <span class="count">
-		1</span>
-	</a>
-</div>
-          <div class="post-share">
-            <div class="social-share sharehidden share-component"></div>
-            <i class="iconfont show-share icon-forward"></i>
-          </div>
-        </footer><!-- .entry-footer -->
-      </article>
-      <!-- #post-## -->
-      <div class="toc" style="background: none;"></div>
-      <section class="post-squares nextprev">
-        
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/20190925git/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2008215.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2008215.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                Git 问题贴</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-        
-          
-            <div class="post-nepre half next">
-          
-            <a href="/20190913computerorganization2/" rel="next">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/GG.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/GG.jpg">
-              </div>
-              <span class="label">
-              Next Post</span>
-              <div class="info">
-                <h3>
-                计算机组成原理学习笔记第二周</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
-      </section>
       
-<div id="vcomments"></div>
-<script>
-  window.onload = function(){
-      var valine = new Valine();
-      valine.init({
-        el: '#vcomments',
-        appId: "U0OpCnjhIuuQ0SBtTbBM8Edm-MdYXbMMI",
-        appKey: "RtTu6xIboGekWhDbViDrCM6v",
-        path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
-		avatar:'' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
-      })
-  }
-</script>
-
-      <section class="author-profile">
-        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
-          <a href="littlezero.top" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/littlegreedy/littlegreedy.github.io@v1.30/img/head.jpg" itemprop="image" alt="littleGreedy" height="70" width="70"></a>
-          <div class="meta">
-            <span class="title">Author</span>
-            <h3 itemprop="name">
-            <a href="littlezero.top" itemprop="url" rel="author">littleGreedy</a>
-            </h3>
-          </div>
+  <!-- 首页默认取最最新文章集 -->
+  
+    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="/18480910max/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
         </div>
-        <hr>
-        <p><i class="iconfont icon-write"></i>only love & learning</p>
-      </section>
-    </main><!-- #main -->
-  </div><!-- #primary -->
+        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
+    </div>
+    <h1 class="entry-title">
+    <a href="/18480910max/">
+    </a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    1848-9-10</div>
+    <p>
+    </p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/18480910max/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>
+  
+
+
+      <div class="clearer">
+      </div>
+    </main>
+    <!-- 
+      <nav class="navigator">
+        
+        <a class="extend prev" rel="prev" href="/categories/技术/"><i class="iconfont icon-back"></i></a><a class="page-number" href="/categories/技术/">1</a><span class="page-number current">2</span>
+      </nav>
+     -->
+    
+  </div>
 </div>
 
+<!-- 
+  
+    <article class="post post-list" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <div class="post-entry">
+    <div class="feature">
+      <a href="/18480910max/">
+        <div class="overlay">
+          <i class="iconfont icon-text">
+          </i>
+        </div>
+        <img width="150" height="150" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/banner/coding.jpg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" >
+      </a>
+    </div>
+    <h1 class="entry-title">
+    <a href="/18480910max/">
+    </a>
+    </h1>
+    <div class="p-time">
+      <i class="iconfont icon-time">
+      </i>
+    1848-9-10</div>
+    <p>
+    </p>
+    <footer class="entry-footer">
+      <div class="post-more">
+        <a href="/18480910max/">
+          <i class="iconfont icon-caidan">
+          </i>
+        </a>
+      </div>
+    </footer>
+  </div>
+  <hr>
+</article>
+  
 
-
+ -->
     </div>    
     <div class="ins-search">
     <div class="ins-search-mask"></div>

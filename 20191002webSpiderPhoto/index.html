@@ -7,7 +7,7 @@
   <script src="/js/src/click.js"></script>
  
   
-  <title itemprop="name">【种树系列】中秋特辑之AvlTree | 小贪心</title>
+  <title itemprop="name">图库爬虫 | 小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -368,11 +368,11 @@ var _hmt = _hmt || [];
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/A692.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/A692.png">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2scenery59.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2scenery59.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      【种树系列】中秋特辑之AvlTree</h1>
+      图库爬虫</h1>
       <p class="entry-census">
         <span>
           <a href="littlezero.top">
@@ -384,7 +384,7 @@ var _hmt = _hmt || [];
         </span>
         <span class="bull">
         ·</span>
-        2019-9-16<span class="bull">
+        2019-10-2<span class="bull">
         ·</span>
       
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -400,89 +400,191 @@ var _hmt = _hmt || [];
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <pre><code class="C">
-/* This ADT can carry out major operations of AvlTree if you achieve the rest. */
-/* AvlTree was created to keep an ideal balance of tree height. */ 
-/* We all know that AvlTree major contains Single Rotation and Double Rotation. */  
+          <p>暑假搭建完博客，随即发现奇缺美图，故写下这个简单的图库爬虫</p>
+<p>学名为<strong>聚集爬虫</strong>，目标设置为简单的<strong>静态图库</strong>和<strong>使用了伪静态的动态图库</strong></p>
+<p>效果：</p>
+<p>1.<strong>高速</strong>：可以网速拉满高速下载图库的图片</p>
+<p>2.<strong>稳定</strong>：涉及了方方面面的异常处理（真的方方面面！0_0 ）和调用国外高匿名代理池网站（若出现大量异常多为图库封禁国外IP所致，自行修改代码中所写的代理功能即可）</p>
+<p>3.<strong>去重</strong>：采用Hash算法对图片的md5值去重</p>
+<p>小技巧：</p>
+<p>1.预测图库图片总数，并模拟出全部下载所需数量大小 </p>
+<p>人工操作：前一步通过抽样得知重复数（一、可调用命令行获取文件名，再将文件名放置Excel比较。  二、或者直接利用md5算法生成文件放置在Excel中），通过标志重捕估算公式预测图片总数；再用简单的概率论知识（球入盒问题）计算全部下载所需下载数量。</p>
+<pre><code class="python">import urllib.request
+import easygui as g
+import os
+import socket
+import time
+from hashlib import md5
+import sys
+from bs4 import BeautifulSoup
+import requests
+import random
+from requests.packages import urllib3
+from test.test_urllib import urlopen
+from requests.exceptions import ReadTimeout, ConnectionError, RequestException
 
-#define ElementType int
 
-typedef struct AvlNode *Position;
-typedef struct AvlNode *AvlTree;
+# 随机选UA
+def ChooseAgent():
+    agents = [
+        &quot;Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/532.5 (KHTML, like Gecko) Chrome/4.0.249.0 Safari/532.5&quot;,
+        &quot;Mozilla/5.0 (Windows; U; Windows NT 5.2; en-US) AppleWebKit/532.9 (KHTML, like Gecko) Chrome/5.0.310.0 Safari/532.9&quot;,
+        &quot;Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US) AppleWebKit/534.7 (KHTML, like Gecko) Chrome/7.0.514.0 Safari/534.7&quot;,
+        &quot;Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US) AppleWebKit/534.14 (KHTML, like Gecko) Chrome/9.0.601.0 Safari/534.14&quot;,
+        &quot;Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.14 (KHTML, like Gecko) Chrome/10.0.601.0 Safari/534.14&quot;,
+        &quot;Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20&quot;,
+        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/534.27 (KHTML, like Gecko) Chrome/12.0.712.0 Safari/534.27&quot;,
+        &quot;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/13.0.782.24 Safari/535.1&quot;,
+    ]
+    return random.choice(agents)
 
-struct AvlNode{
-    ElementType Data;
-    AvlTree Left;
-    AvlTree Right;
-    int Height;
-};
 
-static int Height(Position P){
-    if(!P)    return -1;
-    else return P-&gt;Height;
-}
+# 爬取IP
+def get_ip_list(url, headers):
+    web_data = requests.get(url, headers=headers)
+    soup = BeautifulSoup(web_data.text, &#39;lxml&#39;)
+    ips = soup.find_all(&#39;tr&#39;)
+    ip_list = []
+    for i in range(1, len(ips)):
+        ip_info = ips[i]
+        tds = ip_info.find_all(&#39;td&#39;)
+        ip_list.append(tds[1].text + &#39;:&#39; + tds[2].text)
+    return ip_list
 
-int Max ( int a, int b )
-{
-    return a &gt; b ? a : b;
-}
 
-AvlTree Insert(ElementType X, AvlTree T){
-    if(!T){
-        T=malloc(sizeof(struct AvlNode));
-        if(!T)
-            FatalError(&quot;Out of space!!!&quot;);
-        else{
-            T-&gt;Data=X;
-            T-&gt;Height=0;
-            T-&gt;Left=T-&gt;Right=NULL;
-        }
+# 随机选IP
+def get_random_ip(ip_list):
+    proxy_list = []
+    for ip in ip_list:
+        proxy_list.append(&#39;http://&#39; + ip)
+    proxy_ip = random.choice(proxy_list)
+    proxies = {&#39;http&#39;: proxy_ip}
+    return proxies
+
+
+# 图片去重——Hash算法，path和open需对应相应文件位置
+def md5():
+    path = &#39;E:/Images&#39;
+    f = open(&#39;E:/Images/md5.txt&#39;, &#39;w&#39;)
+
+    list = []
+
+    list1 = []
+
+    # 得到所有图片的路径，加到列表list1中
+    root, _, files = next(os.walk(path))
+    for i in range(len(files)):
+        line = path + &#39;/&#39; + str(files[i])
+        list1.append(line)
+
+    # 计算每张图片的md5值，并将图片路径与其md5值整合到列表list中
+    for n in range(len(list1)):
+        hash = md5()
+        img = open(list1[n], &#39;rb&#39;)
+        hash.update(img.read())
+        img.close()
+        list2 = [list1[n], hash.hexdigest()]
+        f.write(str(list2) + &#39;\n&#39;)
+        list.append(list2)
+
+    # 两两比较md5值，若相同，则删去一张图片
+    m = 0
+    while m &lt; len(list):
+        t = m + 1
+        while t &lt; len(list):
+            if list[m][1] == list[t][1]:
+                os.remove(list[t][0])
+                del list[t]
+            else:
+                t += 1
+        m += 1
+
+
+
+# 下载图片核心代码
+def downloadImages(quantity, nam, address, url):
+    headers = {
+        # &#39;User-Agent&#39;:&#39;Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) &#39;
+        # &#39;Chrome/51.0.2704.63 Safari/537.36 &#39;,
+        &#39;Referer&#39;: url,
+        &#39;Connection&#39;: &#39;keep-alive&#39;
     }
-    else if(X&lt;T-&gt;Data){
-        T-&gt;Left=Insert(X,T-&gt;Left);
-        if(2 == (Height(T-&gt;Left)-Height(T-&gt;Right)))
-            if(X&lt;T-&gt;Left-&gt;Data)
-                T = SingleRotateWithLeft(T);
-            else
-                T = DoubleRotateWithLeft(T);            
-    }
-    else if(X&gt;T-&gt;Data){
-        T-&gt;Right=Insert(X,T-&gt;Right);
-        if(2 == (Height(T-&gt;Right)-Height(T-&gt;Left)))
-            if(X&gt;T-&gt;Right-&gt;Data)
-                T = SingleRotateWithRight(T);
-            else
-                T = DoubleRotateWithRight(T);
-    }
-    /*Else X is in the tree already; we&#39; ll do nothing*/
+    headers[&quot;User-Agent&quot;] = ChooseAgent()
 
-    // don&#39;t forget to renew Height of AvlTree 
-    T-&gt;Height=Max(Height(T-&gt;Left),Height(T-&gt;Right)) + 1 ;
-    return T;
-}
+    IP_url = &#39;http://www.xicidaili.com/nn/&#39;
+    ip_list = get_ip_list(IP_url, headers=headers)
 
-static Position SingleRotateWithLeft(Position B){
-    Position A;
+    timeout = 20
+    socket.setdefaulttimeout(timeout)  # 这里对整个socket层设置超时时间。后续文件中如果再使用到socket，不必再设置
+    sleep_download_time = 0
 
-    /*ATree are dancing with BTree*/
-    A = B-&gt;Left;
-    B-&gt;Left = A-&gt;Right;
-    A-&gt;Right = B;
+    for i in range(1, quantity + 1):
 
-    B-&gt;Height = Max(Height(B-&gt;Left),Height(B-&gt;Right))+1;
-    A-&gt;Height = Max(Height(A-&gt;Left),Height(A-&gt;Right))+1;
+        try:
+            time.sleep(sleep_download_time)  # 这里时间自己设定
 
-    return A;   /*New root*/
-} 
+            proxies = get_random_ip(ip_list)
 
-static Position DoubleRotateWithLeft(Position C){
-    /*Rotate between A and B */
-    C-&gt;Left = SingleRotateWithRight(C-&gt;Left);
+            urllib3.disable_warnings()
 
-    /*Rotate between C and B */
-    return SingleRotateWithLeft(C);
-} 
+            response = requests.get(url, headers=headers, proxies=proxies, verify=False)
+            if response.status_code == requests.codes.ok:
+                print(&quot;访问成功&quot;)
+            _image = response.content
+
+            name = address + &#39;/&#39; + nam + &quot;%s&quot; % i + &#39;.png&#39;
+
+
+            with open(name, &#39;wb&#39;) as t:
+                t.write(_image)
+                t.close()
+            response.close()
+            print(proxies, &quot;第%d张打印完毕&quot; % i)
+        except requests.RequestException as e:
+            print(e)
+
+        except UnicodeDecodeError as e:
+
+            print(&#39;-----UnicodeDecodeError url:&#39;, url)
+
+        except urllib.error.URLError as e:
+            print(&quot;-----urlError url:&quot;, url)
+
+        except socket.timeout as e:
+            print(&quot;-----socket timout:&quot;, url)
+        except ReadTimeout:
+            print(&quot;timeout&quot;)
+        except ConnectionError:
+            print(&quot;connection Error&quot;)
+        except RequestException:
+            print(&quot;error&quot;)
+
+
+if __name__ == &#39;__main__&#39;:
+    sys.setrecursionlimit(100000)  # 递归深度设置为十万
+
+    fields_list = [&#39;*图片来源网址&#39;, &#39;文件命名&#39;, &#39;下载数量&#39;]
+    values_list = [&#39;&#39;, &#39;images&#39;, &#39;1&#39;]
+    know = g.multenterbox(msg=&#39;带*号的为必填项&#39;, title=&#39;自动下载图片脚本&#39;, fields=fields_list, values=values_list)
+    an = know[0]
+    nam = know[1]
+    num = int(know[2])
+
+    address = g.diropenbox(msg=&#39;请选择存储文件夹 &#39;, title=&#39;自动下载图片脚本&#39;)
+
+
+    check = an[:4]
+
+    if check != &#39;http&#39;:
+        ans = &#39;http://&#39; + an
+    else:
+        ans = an
+
+    downloadImages(num, nam, address, ans)
+    md5()
+
 </code></pre>
+<p>正在学习爬虫，欢迎致信交流</p>
 
         </div>
         <!-- .entry-content -->
@@ -512,15 +614,15 @@ static Position DoubleRotateWithLeft(Position C){
           
             <div class="post-nepre half previous">
           
-            <a href="/20190925git/" rel="prev">
+            <a href="/20191003cantor/" rel="prev">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2008215.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2008215.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/A464.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/A464.png">
               </div>
               <span class="label">
               Previous Post</span>
               <div class="info">
                 <h3>
-                Git 问题贴</h3>
+                【数论】康托展开与逆康托展开</h3>
                 <hr>
               </div>
             </a>
@@ -530,15 +632,15 @@ static Position DoubleRotateWithLeft(Position C){
           
             <div class="post-nepre half next">
           
-            <a href="/20190913computerorganization2/" rel="next">
+            <a href="/20190925git/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/GG.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/GG.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2008215.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2008215.jpg">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                计算机组成原理学习笔记第二周</h3>
+                Git 问题贴</h3>
                 <hr>
               </div>
             </a>

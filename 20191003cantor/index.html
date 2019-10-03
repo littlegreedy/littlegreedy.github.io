@@ -7,7 +7,7 @@
   <script src="/js/src/click.js"></script>
  
   
-  <title itemprop="name">【种树系列】中秋特辑之AvlTree | 小贪心</title>
+  <title itemprop="name">【数论】康托展开与逆康托展开 | 小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -368,11 +368,11 @@ var _hmt = _hmt || [];
 
   <div class="pattern-center single-center">
     <!-- 有配图默认渲染第一张 -->
-    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/A692.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/A692.png">
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/A464.png);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/A464.png">
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      【种树系列】中秋特辑之AvlTree</h1>
+      【数论】康托展开与逆康托展开</h1>
       <p class="entry-census">
         <span>
           <a href="littlezero.top">
@@ -384,7 +384,7 @@ var _hmt = _hmt || [];
         </span>
         <span class="bull">
         ·</span>
-        2019-9-16<span class="bull">
+        2019-10-3<span class="bull">
         ·</span>
       
 <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -400,89 +400,74 @@ var _hmt = _hmt || [];
         <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
         
         <div class="entry-content">
-          <pre><code class="C">
-/* This ADT can carry out major operations of AvlTree if you achieve the rest. */
-/* AvlTree was created to keep an ideal balance of tree height. */ 
-/* We all know that AvlTree major contains Single Rotation and Double Rotation. */  
-
-#define ElementType int
-
-typedef struct AvlNode *Position;
-typedef struct AvlNode *AvlTree;
-
-struct AvlNode{
-    ElementType Data;
-    AvlTree Left;
-    AvlTree Right;
-    int Height;
-};
-
-static int Height(Position P){
-    if(!P)    return -1;
-    else return P-&gt;Height;
-}
-
-int Max ( int a, int b )
-{
-    return a &gt; b ? a : b;
-}
-
-AvlTree Insert(ElementType X, AvlTree T){
-    if(!T){
-        T=malloc(sizeof(struct AvlNode));
-        if(!T)
-            FatalError(&quot;Out of space!!!&quot;);
-        else{
-            T-&gt;Data=X;
-            T-&gt;Height=0;
-            T-&gt;Left=T-&gt;Right=NULL;
+          <h1 id="康托展开"><a href="#康托展开" class="headerlink" title="康托展开"></a>康托展开</h1><p>涉及了组合数学的知识，他的定义是一个全排列到一个自然数的双射，常用于构建哈希表时的空间压缩。 康托展开的实质是计算当前排列在所有由小到大全排列中的名次，因此是可逆的。</p>
+<ol>
+<li><h3 id="效果："><a href="#效果：" class="headerlink" title="效果："></a>效果：</h3><p>给定一个序列计算比序列组合小的总个数。</p>
+<p><strong>（比如封面图的晓响雷电，给她们标号，可求比该序数排列组合小的拍照顺序总数）</strong></p>
+</li>
+</ol>
+<p>假设有 {1， 2， 3} 这三个数，那么全部的排列组合有 6种，按从小到大的顺序有 123, 132，213， 231， 312， 321。</p>
+<p>而康托展开能以O(N^2)求出比某个排序组合小的个数。比如说 比 213 小的数有2个，比312小的数有4个。</p>
+<ol start="2">
+<li><h3 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h3><p><strong>X = A[0] <em> (n-1)! + A[1] </em> (n-2)! + … + A[n-1] * 0!</strong> </p>
+<ul>
+<li><p><strong>A[i]</strong> 指的是位于位置i后面的数小于A[i]值的个数,后面乘的就是后面还有多少个数的阶乘</p>
+</li>
+<li><p>这个算出来的数康拖展开值，是在所有排列次序 - 1的值，因此<strong>X</strong>+1即为在全排列中的次序</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>例子 ：<br>在（1，2，3，4，5）5个数的排列组合中，计算 34152的康托展开值。<br>带入上面的公式</p>
+<p>X = 2 <em> 4! + 2 </em> 3! + 0 <em> 2! + 1 </em> 1! + 0 * 0!<br>=&gt;X = 61</p>
+<h4 id="什么你上面的有点没看懂？-不急这有文字描述版"><a href="#什么你上面的有点没看懂？-不急这有文字描述版" class="headerlink" title="什么你上面的有点没看懂？ 不急这有文字描述版~"></a><strong>什么你上面的有点没看懂？</strong> 不急这有文字描述版~</h4><p>假设有 {1，2， 3， 4} 这4个数，根据组合数学的知识，一共有 4*3*2*1种排序组合。</p>
+<p>比如说<strong>3421</strong>（<strong>且看封面图的晓响雷电，给她们标号为3421，求比3421排序组合小的拍照顺序总数</strong>）</p>
+<ul>
+<li><p>首位3，比3小的且之前没出现的数有1、2，那么就有2*3！</p>
+</li>
+<li><p>次位4，比四小的数有1、2、3，但已经出现在首位了，所以共有两位，即1、2，那么有2*2！</p>
+</li>
+<li><p>第三位2，比2小的只有1，且首位次位无1，那么就有1*1！</p>
+<p>则 2*3！+2*2！+1*1！就是比3421排序组合小的总个数。</p>
+</li>
+</ul>
+<p><strong>总结：</strong>从首位3开始到倒数第二位截至，找出比当前这位数小的个数，且之前没有出现过的数的个数乘以对应阶乘，累加结果就是我们要求的值。</p>
+<h3 id="3-用途："><a href="#3-用途：" class="headerlink" title="3.用途："></a>3.用途：</h3><p>这种技巧也能够运用在状态压缩上面，某个排序组合有 x个比它小的排序组合，那么可以给这种排序组合编号为x，可以保证不会有编号重叠的情况，实现符号压缩。 可以用于前篇的爬虫文件名命名中</p>
+<h1 id="逆康托展开"><a href="#逆康托展开" class="headerlink" title="逆康托展开"></a>逆康托展开</h1><p>康拖展开是从序列到自然数的映射且是可逆的，那么逆康拖展开便是从自然数到序列的映射<br>例子 ：<br>在（1，2，3，4，5) 给出61可以算出起排列组合为34152<br>具体过程如下：<br>用 61 / 4! = 2余13，说明 ,说明比首位小的数有2个，所以首位为3。<br>用 13 / 3! = 2余1，说明 ，说明在第二位之后小于第二位的数有2个，所以第二位为4。<br>用 1 / 2! = 0余1，说明 ，说明在第三位之后没有小于第三位的数，所以第三位为1。<br>用 1 / 1! = 1余0，说明 ，说明在第二位之后小于第四位的数有1个，所以第四位为5。</p>
+<p><strong>总结</strong>：在已知编号的情况下，也能够通过编号还原排列组合。顺序反过来就行了。</p>
+<h1 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h1><pre><code class="c">
+int cantor(char* ss) { // 先往 n[] 存放阶乘的结果
+    int ret = 0;
+    for(int i = 0; i &lt; 9; ++i) {
+        int cnt = 0;
+        for(int j = i+1; j &lt; 9; ++j) {
+            if(ss[j] &lt; ss[i]) cnt++;
         }
+        ret += cnt*n[8-i];
     }
-    else if(X&lt;T-&gt;Data){
-        T-&gt;Left=Insert(X,T-&gt;Left);
-        if(2 == (Height(T-&gt;Left)-Height(T-&gt;Right)))
-            if(X&lt;T-&gt;Left-&gt;Data)
-                T = SingleRotateWithLeft(T);
-            else
-                T = DoubleRotateWithLeft(T);            
-    }
-    else if(X&gt;T-&gt;Data){
-        T-&gt;Right=Insert(X,T-&gt;Right);
-        if(2 == (Height(T-&gt;Right)-Height(T-&gt;Left)))
-            if(X&gt;T-&gt;Right-&gt;Data)
-                T = SingleRotateWithRight(T);
-            else
-                T = DoubleRotateWithRight(T);
-    }
-    /*Else X is in the tree already; we&#39; ll do nothing*/
-
-    // don&#39;t forget to renew Height of AvlTree 
-    T-&gt;Height=Max(Height(T-&gt;Left),Height(T-&gt;Right)) + 1 ;
-    return T;
+    return ret;
 }
 
-static Position SingleRotateWithLeft(Position B){
-    Position A;
-
-    /*ATree are dancing with BTree*/
-    A = B-&gt;Left;
-    B-&gt;Left = A-&gt;Right;
-    A-&gt;Right = B;
-
-    B-&gt;Height = Max(Height(B-&gt;Left),Height(B-&gt;Right))+1;
-    A-&gt;Height = Max(Height(A-&gt;Left),Height(A-&gt;Right))+1;
-
-    return A;   /*New root*/
-} 
-
-static Position DoubleRotateWithLeft(Position C){
-    /*Rotate between A and B */
-    C-&gt;Left = SingleRotateWithRight(C-&gt;Left);
-
-    /*Rotate between C and B */
-    return SingleRotateWithLeft(C);
-} 
+void decantor(int num, char *ss) {
+   int p = 0; bool v[10];
+   memset(v, false, sizeof(v));
+   for(int i = 8; i &gt;= 0; --i) {
+        int cnt = 0, tmp = num/n[i];
+        num %= n[i];
+        for(int j = 0; j &lt; 9; ++j) {
+            if(v[j]) continue;
+            if(cnt == tmp) {
+                ss[p++] = j+&#39;0&#39;;
+                v[j] = true;
+                break;
+            }
+            cnt++;
+        }
+   }
+   ss[p] = &#39;\0&#39;;
+}
 </code></pre>
+<p>​     </p>
 
         </div>
         <!-- .entry-content -->
@@ -509,36 +494,19 @@ static Position DoubleRotateWithLeft(Position C){
       <div class="toc" style="background: none;"></div>
       <section class="post-squares nextprev">
         
-          
-            <div class="post-nepre half previous">
-          
-            <a href="/20190925git/" rel="prev">
-              <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2008215.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2008215.jpg">
-              </div>
-              <span class="label">
-              Previous Post</span>
-              <div class="info">
-                <h3>
-                Git 问题贴</h3>
-                <hr>
-              </div>
-            </a>
-          </div>
-        
         
           
-            <div class="post-nepre half next">
+            <div class="post-nepre full next">
           
-            <a href="/20190913computerorganization2/" rel="next">
+            <a href="/20191002webSpiderPhoto/" rel="next">
               <div class="background">
-                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/GG.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/GG.jpg">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2scenery59.png" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://cdn.jsdelivr.net/gh/littlegreedy/Photo/img/pic/2scenery59.png">
               </div>
               <span class="label">
               Next Post</span>
               <div class="info">
                 <h3>
-                计算机组成原理学习笔记第二周</h3>
+                图库爬虫</h3>
                 <hr>
               </div>
             </a>
