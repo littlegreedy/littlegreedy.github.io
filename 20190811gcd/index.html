@@ -519,10 +519,12 @@ __gcd(int a,int b)
       var valine = new Valine();
       valine.init({
         el: '#vcomments',
+		notify: true, // 邮件提醒!!!
+		verify: true, // 验证码
         appId: "U0OpCnjhIuuQ0SBtTbBM8Edm-MdYXbMMI",
         appKey: "RtTu6xIboGekWhDbViDrCM6v",
         path: window.location.pathname,
-        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+        placeholder: "你是我一生只会遇见一次的惊喜 ...",
 		avatar:'' // (''/mp/identicon/monsterid/wavatar/robohash/retro/hide)
       })
   }
