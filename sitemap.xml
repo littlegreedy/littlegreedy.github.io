@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/links/index.html</loc>
+    
+    <lastmod>2019-10-06T17:16:14.373Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/20191003cantor/</loc>
     
     <lastmod>2019-10-03T15:28:43.959Z</lastmod>
@@ -61,13 +68,6 @@
     <loc>/bangumi/index.html</loc>
     
     <lastmod>2019-09-20T16:15:33.206Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/links/index.html</loc>
-    
-    <lastmod>2019-09-20T16:08:34.842Z</lastmod>
     
   </url>
   
