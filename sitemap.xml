@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/music/index.html</loc>
+    
+    <lastmod>2019-11-17T05:07:28.485Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/20191003cantor/</loc>
     
     <lastmod>2019-11-17T04:57:06.010Z</lastmod>
@@ -268,13 +275,6 @@
   </url>
   
   <url>
-    <loc>/donate/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/theme-sakura/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
@@ -282,14 +282,14 @@
   </url>
   
   <url>
-    <loc>/music/index.html</loc>
+    <loc>/video/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>/comment/index.html</loc>
+    <loc>/donate/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -303,7 +303,7 @@
   </url>
   
   <url>
-    <loc>/rss/index.html</loc>
+    <loc>/comment/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -317,7 +317,7 @@
   </url>
   
   <url>
-    <loc>/video/index.html</loc>
+    <loc>/rss/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
