@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/20191123myphoto/</loc>
+    
+    <lastmod>2019-11-23T16:04:16.903Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/20191123wephoto/</loc>
+    
+    <lastmod>2019-11-23T16:02:36.847Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/about/index.html</loc>
     
-    <lastmod>2019-11-23T06:57:20.373Z</lastmod>
+    <lastmod>2019-11-23T15:07:21.719Z</lastmod>
     
   </url>
   
@@ -275,13 +289,6 @@
   </url>
   
   <url>
-    <loc>/rss/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/tags/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
@@ -290,6 +297,13 @@
   
   <url>
     <loc>/donate/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/rss/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -310,14 +324,14 @@
   </url>
   
   <url>
-    <loc>/video/index.html</loc>
+    <loc>/20181212Hexo-Theme-Sakura/</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>/20181212Hexo-Theme-Sakura/</loc>
+    <loc>/video/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
