@@ -623,64 +623,64 @@ function bot_ui_ini() {
 										}]
 									}).then(function (a) {
 												thirdpart()
-									
+
 										})
 									})	
-                                })
-                            })
-                        })
-                    })
-                })
-            })
-        },
-        thirdpart = function () {
-            botui.message.add({
-                delay: 1E3,
-                content: "零号来自一本书里的角色，因为每次对其出场都惊喜不已，遂取littlezero小零号为名~ "
-            }).then(function () {
-                botui.action.button({
-                    delay: 1500,
-                    action: [{
-                        text: "为什么昵称是小贪心呢？ 🤔",
-                        value: "why-cat"
-                    }]
-                }).then(function (a) {
-                    fourthpart()
-                })
-            })
-        },
-        fourthpart = function () {
-            botui.message.add({
-                delay: 1E3,
-                content: "因为对贪心算法有种执念… "
-            }).then(function () {
-                botui.message.add({
-                    delay: 1300,
-                    content: "贪心里有个富有人生哲理的概念：“ 局部选取最优解。” "
-                }).then(function () {
-                    botui.action.button({
-                        delay: 1500,
-                        action: [{
-                            text: "域名有什么含意吗？(ง •_•)ง",
-                            value: "why-domain"
-                        }]
-                    }).then(function (a) {
-                        fifthpart()
-                    })
-                })
-            })
-        },
-        fifthpart = function () {
-            botui.message.add({
-                delay: 1E3,
-                content: "emmmm，看备案信息你就知道了=.= 本来想要zero的，但真滴买不到。。。"
-            }).then(function () {
-                botui.message.add({
-                    delay: 1600,
-                    content: "那么，请仔细看看我的博客吧？ ^_^"
-                })
-            })
-        } 
+	                            })
+	                        })
+	                    })
+	                })
+	            })
+	        })
+	    },
+	    thirdpart = function () {
+	        botui.message.add({
+	            delay: 1E3,
+	            content: "零号来自一本书里的角色，因为每次对其出场都惊喜不已，遂取littlezero小零号为名~ "
+	        }).then(function () {
+	            botui.action.button({
+	                delay: 1500,
+	                action: [{
+	                    text: "为什么昵称是小贪心呢？ 🤔",
+	                    value: "why-cat"
+	                }]
+	            }).then(function (a) {
+	                fourthpart()
+	            })
+	        })
+	    },
+	    fourthpart = function () {
+	        botui.message.add({
+	            delay: 1E3,
+	            content: "因为对贪心算法有种执念… "
+	        }).then(function () {
+	            botui.message.add({
+	                delay: 1300,
+	                content: "贪心里有个富有人生哲理的概念：“ 局部选取最优解。” "
+	            }).then(function () {
+	                botui.action.button({
+	                    delay: 1500,
+	                    action: [{
+	                        text: "域名有什么含意吗？(ง •_•)ง",
+	                        value: "why-domain"
+	                    }]
+	                }).then(function (a) {
+	                    fifthpart()
+	                })
+	            })
+	        })
+	    },
+	    fifthpart = function () {
+	        botui.message.add({
+	            delay: 1E3,
+	            content: "emmmm，看备案信息你就知道了=.= 本来想要zero的，但真滴买不到。。。"
+	        }).then(function () {
+	            botui.message.add({
+	                delay: 1600,
+	                content: "那么，请仔细看看我的博客吧？ ^_^"
+	            })
+	        })
+	    } 
 }
 bot_ui_ini()
 </script>
