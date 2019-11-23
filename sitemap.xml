@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/20191123WePhoto/</loc>
+    
+    <lastmod>2019-11-23T16:10:04.544Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/WePhoto-0.html</loc>
+    
+    <lastmod>2019-11-23T16:09:04.510Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/wephoto-1.html</loc>
+    
+    <lastmod>2019-11-23T16:08:38.532Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/20191123myphoto/</loc>
     
     <lastmod>2019-11-23T16:04:16.903Z</lastmod>
@@ -9,7 +30,7 @@
   </url>
   
   <url>
-    <loc>/20191123wephoto/</loc>
+    <loc>/wephoto.html</loc>
     
     <lastmod>2019-11-23T16:02:36.847Z</lastmod>
     
@@ -289,21 +310,14 @@
   </url>
   
   <url>
+    <loc>/comment/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/tags/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/donate/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/rss/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -317,14 +331,7 @@
   </url>
   
   <url>
-    <loc>/comment/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/20181212Hexo-Theme-Sakura/</loc>
+    <loc>/donate/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -332,6 +339,20 @@
   
   <url>
     <loc>/video/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/rss/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/20181212Hexo-Theme-Sakura/</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
