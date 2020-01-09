@@ -4,7 +4,7 @@
   <url>
     <loc>/links/index.html</loc>
     
-    <lastmod>2019-12-07T15:35:06.634Z</lastmod>
+    <lastmod>2020-01-09T16:31:49.719Z</lastmod>
     
   </url>
   
@@ -282,28 +282,7 @@
   </url>
   
   <url>
-    <loc>/tags/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/20181212Hexo-Theme-Sakura/</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/comment/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/theme-sakura/index.html</loc>
+    <loc>/video/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -317,14 +296,35 @@
   </url>
   
   <url>
-    <loc>/donate/index.html</loc>
+    <loc>/theme-sakura/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
   </url>
   
   <url>
-    <loc>/video/index.html</loc>
+    <loc>/tags/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/comment/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/20181212Hexo-Theme-Sakura/</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/donate/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
