@@ -7,7 +7,7 @@
   <script src="/js/src/click.js"></script>
  
   
-  <title itemprop="name">JavaA | 小贪心</title>
+  <title itemprop="name">JavaOne | 小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -371,7 +371,7 @@ var _hmt = _hmt || [];
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      JavaA</h1>
+      JavaOne</h1>
       <p class="entry-census">
         <span>
           <a href="littlezero.top">
@@ -440,8 +440,28 @@ var _hmt = _hmt || [];
 
 
 
-<h2 id="2-关键词和标识符"><a href="#2-关键词和标识符" class="headerlink" title="2.关键词和标识符"></a>2.关键词和标识符</h2><p>标识符命名规则</p>
-<h2 id="3-常量和变量"><a href="#3-常量和变量" class="headerlink" title="3.常量和变量"></a>3.常量和变量</h2>
+<h2 id="2-关键词和标识符、常量与变量、数据类型转换、输入、运算符与表达式"><a href="#2-关键词和标识符、常量与变量、数据类型转换、输入、运算符与表达式" class="headerlink" title="2.关键词和标识符、常量与变量、数据类型转换、输入、运算符与表达式"></a>2.关键词和标识符、常量与变量、数据类型转换、输入、运算符与表达式</h2><p>标识符命名规则</p>
+<p>使用常量的好处：增可读性、增可维护性</p>
+<p>自动类型转换与强制类型转换的条件和要点</p>
+<p>字符串和数值型数据互换</p>
+<p>两种输入方式</p>
+<p>注意表达式及运算符的优先级和结合性</p>
+<p> 【实例】我写过的一个让人崩溃的表达式 ，滥用条件运算符 ：）  </p>
+<p>要狠狠地重视优先级和结合性！！   </p>
+<pre><code class="java">// 滥用错误示范！最终未能计算出需要的结果
+if(i==0||j==0)  
+    EditDistance[i][j]=(i&gt;=j?i-j:j-i);
+else 
+    EditDistance[i][j]=Math.min(Math.min((EditDistance[i-1][j-1]+ (word1.charAt(i)==word2.charAt(j)?0:1)),EditDistance[i-1][j]+1),EditDistance[i][j-1]+1);
+
+</code></pre>
+<h2 id="3-余下的！关注与C语言的不同点！"><a href="#3-余下的！关注与C语言的不同点！" class="headerlink" title="3.余下的！关注与C语言的不同点！"></a>3.余下的！关注与C语言的不同点！</h2><p>条件分支的条件表达式必须为逻辑型的值！</p>
+<p>foreach语句三个数据遍历数组的元素</p>
+<p>数组诞生：1.声明、2.分配空间、3.创建数组元素并赋值；<br>数组<strong>声明</strong>或<strong>声明并初始化</strong>时不允许指定其长度；<br>二维（或多维）数组的每行列数可以不同（声明分配内存的new语句 分开）；<br>数组和字符串会被越界检查；</p>
+<p>数组类和字符串类的方法。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/javaPic/java2.png" alt></p>
+<p><i class="fa fa-pencil"></i>OKay！下一节就轮到面向对象了！</p>
+
         </div>
         <!-- .entry-content -->
        

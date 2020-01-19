@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2020-01-19T10:52:39.441Z</updated>
+  <updated>2020-01-19T13:15:07.786Z</updated>
   <id>/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>JavaA</title>
+    <title>JavaOne</title>
     <link href="/20200119JavaA/"/>
     <id>/20200119JavaA/</id>
     <published>2020-01-19T09:19:59.000Z</published>
-    <updated>2020-01-19T10:52:39.441Z</updated>
+    <updated>2020-01-19T13:15:07.786Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,10 @@
     
     </summary>
     
-      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="笔记" scheme="/categories/%E7%AC%94%E8%AE%B0/"/>
     
+    
+      <category term="Java" scheme="/tags/Java/"/>
     
   </entry>
   
