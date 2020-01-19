@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2019-11-23T16:04:16.903Z</updated>
+  <updated>2020-01-19T10:52:39.441Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JavaA</title>
+    <link href="/20200119JavaA/"/>
+    <id>/20200119JavaA/</id>
+    <published>2020-01-19T09:19:59.000Z</published>
+    <updated>2020-01-19T10:52:39.441Z</updated>
+    
+    <summary type="html">
+    
+      Java语言基础
+    
+    </summary>
+    
+      <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>两只神仙</title>
@@ -405,28 +423,6 @@ struct PolyNode {
     
     
       <category term="笔记" scheme="/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>风起雨时</title>
-    <link href="/20190813intern/"/>
-    <id>/20190813intern/</id>
-    <published>2019-08-13T07:51:23.000Z</published>
-    <updated>2019-08-20T16:47:08.261Z</updated>
-    
-    <summary type="html">
-    
-      小实习生（一）
-    
-    </summary>
-    
-      <category term="生活" scheme="/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-    
-      <category term="成长" scheme="/tags/%E6%88%90%E9%95%BF/"/>
-    
-      <category term="实习" scheme="/tags/%E5%AE%9E%E4%B9%A0/"/>
     
   </entry>
   

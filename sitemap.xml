@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>/20200119JavaA/</loc>
+    
+    <lastmod>2020-01-19T10:52:39.441Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/hah/index.html</loc>
+    
+    <lastmod>2020-01-18T11:52:07.577Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/links/index.html</loc>
     
     <lastmod>2020-01-09T16:31:49.719Z</lastmod>
@@ -282,21 +296,7 @@
   </url>
   
   <url>
-    <loc>/rss/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/tags/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/donate/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -310,7 +310,28 @@
   </url>
   
   <url>
+    <loc>/video/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/comment/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/donate/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/rss/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -324,9 +345,9 @@
   </url>
   
   <url>
-    <loc>/video/index.html</loc>
+    <loc>/hah/config.json</loc>
     
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    <lastmod>2017-07-04T01:51:55.000Z</lastmod>
     
   </url>
   
