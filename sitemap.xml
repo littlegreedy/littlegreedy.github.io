@@ -9,13 +9,6 @@
   </url>
   
   <url>
-    <loc>/hah/index.html</loc>
-    
-    <lastmod>2020-01-18T11:52:07.577Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/links/index.html</loc>
     
     <lastmod>2020-01-09T16:31:49.719Z</lastmod>
@@ -296,7 +289,7 @@
   </url>
   
   <url>
-    <loc>/tags/index.html</loc>
+    <loc>/rss/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -310,7 +303,14 @@
   </url>
   
   <url>
-    <loc>/video/index.html</loc>
+    <loc>/tags/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>/20181212Hexo-Theme-Sakura/</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -331,23 +331,9 @@
   </url>
   
   <url>
-    <loc>/rss/index.html</loc>
+    <loc>/video/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/20181212Hexo-Theme-Sakura/</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/hah/config.json</loc>
-    
-    <lastmod>2017-07-04T01:51:55.000Z</lastmod>
     
   </url>
   
