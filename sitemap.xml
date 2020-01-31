@@ -4,7 +4,7 @@
   <url>
     <loc>/20200119JavaA/</loc>
     
-    <lastmod>2020-01-19T13:16:13.044Z</lastmod>
+    <lastmod>2020-01-31T13:34:45.215Z</lastmod>
     
   </url>
   
@@ -289,6 +289,13 @@
   </url>
   
   <url>
+    <loc>/donate/index.html</loc>
+    
+    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>/rss/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
@@ -296,7 +303,7 @@
   </url>
   
   <url>
-    <loc>/theme-sakura/index.html</loc>
+    <loc>/comment/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -317,14 +324,7 @@
   </url>
   
   <url>
-    <loc>/comment/index.html</loc>
-    
-    <lastmod>2019-06-01T14:21:46.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/donate/index.html</loc>
+    <loc>/theme-sakura/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     

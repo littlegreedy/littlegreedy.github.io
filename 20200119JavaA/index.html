@@ -7,7 +7,7 @@
   <script src="/js/src/click.js"></script>
  
   
-  <title itemprop="name">JavaA | 小贪心</title>
+  <title itemprop="name">Java基知 | 小贪心</title>
   
     <link rel="shortcut icon" href="/images/favicon.ico">
   
@@ -87,11 +87,11 @@
     <div class="focusinfo no-select">
       <div class="header-tou">
         <a href="https://littlezero.top">
-          <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/WeAvatar1.jpg">
+          <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/avatar00.png">
         </a>
       </div>
       <div class="header-info">
-        <p>我们一直向前</p>
+        <p>你得丢开以往的事，才能不断继续前进</p>
         <div class="top-social_v2">
           <li id="bg-pre">
             <img class="flipx" src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/other/next-b.svg">
@@ -371,7 +371,7 @@ var _hmt = _hmt || [];
     </div>
     <header class="pattern-header single-header">
       <h1 class="entry-title">
-      JavaA</h1>
+      Java基知</h1>
       <p class="entry-census">
         <span>
           <a href="littlezero.top">
@@ -425,7 +425,7 @@ var _hmt = _hmt || [];
 
 
 <h3 id="整型："><a href="#整型：" class="headerlink" title="整型："></a>整型：</h3><p>关键词：byte、short、int、long</p>
-<p>表示形式：十进制、八进制（以0开头）、十六进制（以0x开头）</p>
+<p>表示形式：二进制（以0b开头）、十进制、八进制（以0开头）、十六进制（以0x开头）</p>
 <p>占字节数、范围</p>
 <h3 id="浮点："><a href="#浮点：" class="headerlink" title="浮点："></a>浮点：</h3><p>关键词：float、double   </p>
 <p>表示形式：标准计数法、科学计数法</p>
@@ -446,16 +446,24 @@ var _hmt = _hmt || [];
 <p>字符串和数值型数据互换</p>
 <p>两种输入方式</p>
 <p>注意表达式及运算符的优先级和结合性</p>
-<p> 【实例】我写过的一个让人崩溃的表达式 ，滥用条件运算符 ：）  </p>
-<p>要狠狠地重视优先级和结合性！！   </p>
-<pre><code class="java">// 滥用错误示范！最终未能计算出需要的结果
+<h4 id="【实例】我写过的一个让人崩溃的表达式-，滥用条件运算符-：）"><a href="#【实例】我写过的一个让人崩溃的表达式-，滥用条件运算符-：）" class="headerlink" title="【实例】我写过的一个让人崩溃的表达式 ，滥用条件运算符 ：）"></a>【实例】我写过的一个让人崩溃的表达式 ，滥用条件运算符 ：）</h4><p>重视基础——优先级和结合性！！   </p>
+<pre><code class="java">// else后面滥用错误！最终未能计算出需要的结果
 if(i==0||j==0)  
-    EditDistance[i][j]=(i&gt;=j?i-j:j-i);
+    EditDistance[i][j]=Math.abs(i,j);
 else 
     EditDistance[i][j]=Math.min(Math.min((EditDistance[i-1][j-1]+ (word1.charAt(i)==word2.charAt(j)?0:1)),EditDistance[i-1][j]+1),EditDistance[i][j-1]+1);
 
 </code></pre>
-<h2 id="3-余下的！关注与C语言的不同点！"><a href="#3-余下的！关注与C语言的不同点！" class="headerlink" title="3.余下的！关注与C语言的不同点！"></a>3.余下的！关注与C语言的不同点！</h2><p>条件分支的条件表达式必须为逻辑型的值！</p>
+<h4 id="a-b-和a-a-b的区别"><a href="#a-b-和a-a-b的区别" class="headerlink" title="a+=b 和a=a+b的区别"></a>a+=b 和a=a+b的区别</h4><pre><code>btye a=127; 
+btye b=127;
+a=a+b; //error value
+a+=b;    
+</code></pre><p>当类型低于long时，运算发生之前会转换成int普通类型，即整型提升。</p>
+<p>a与b经过整型提升，整型a+b被赋给字节型a，赋值错误。</p>
+<p>+=运算a和b都转成int，运算正确。</p>
+<h4 id="位运算符mod问题"><a href="#位运算符mod问题" class="headerlink" title="位运算符mod问题"></a>位运算符mod问题</h4><p>对于int型整数移位a&gt;&gt;b ,系统先将b对32取模,得到的结果才是真正移位的位数</p>
+<p>对于long型整数移位时a&gt;&gt;b ,则是先将移位位数b对64取模</p>
+<h2 id="3-流程控制数组字符串与C语言的不同点小结"><a href="#3-流程控制数组字符串与C语言的不同点小结" class="headerlink" title="3.流程控制数组字符串与C语言的不同点小结"></a>3.流程控制数组字符串与C语言的不同点小结</h2><p>条件分支的条件表达式必须为逻辑型的值！</p>
 <p>foreach语句三个数据遍历数组的元素</p>
 <p>数组诞生：1.声明、2.分配空间、3.创建数组元素并赋值；<br>数组<strong>声明</strong>或<strong>声明并初始化</strong>时不允许指定其长度；<br>二维（或多维）数组的每行列数可以不同（声明分配内存的new语句 分开）；<br>数组和字符串会被越界检查；</p>
 <p>数组类和字符串类的方法。</p>
@@ -747,7 +755,7 @@ $(document).ready(function() {
   
   <div id="mo-nav" class="">
   <div class="m-avatar">
-    <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/WeAvatar1.jpg">
+    <img src="https://cdn.jsdelivr.net/gh/littlegreedy/zero/img/pic/avatar00.png">
   </div>
   <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">さくら荘そのLittleGreedy</p>
   <p style="text-align: center; word-spacing: 20px;">
