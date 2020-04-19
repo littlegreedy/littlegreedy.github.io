@@ -37,23 +37,9 @@
   </url>
   
   <url>
-    <loc>/20191123myphoto/</loc>
-    
-    <lastmod>2019-11-23T16:04:16.903Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>/about/index.html</loc>
     
     <lastmod>2019-11-23T15:07:21.719Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>/music/index.html</loc>
-    
-    <lastmod>2019-11-23T06:57:11.523Z</lastmod>
     
   </url>
   
@@ -310,7 +296,7 @@
   </url>
   
   <url>
-    <loc>/donate/index.html</loc>
+    <loc>/comment/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     
@@ -338,7 +324,7 @@
   </url>
   
   <url>
-    <loc>/comment/index.html</loc>
+    <loc>/donate/index.html</loc>
     
     <lastmod>2019-06-01T14:21:46.000Z</lastmod>
     

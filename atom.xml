@@ -95,24 +95,6 @@
   </entry>
   
   <entry>
-    <title>两只神仙</title>
-    <link href="/20191123myphoto/"/>
-    <id>/20191123myphoto/</id>
-    <published>2019-11-23T15:39:16.000Z</published>
-    <updated>2019-11-23T16:04:16.903Z</updated>
-    
-    <summary type="html">
-    
-      仙~
-    
-    </summary>
-    
-      <category term="随想" scheme="/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>【数论】康托展开与逆康托展开</title>
     <link href="/20191003cantor/"/>
     <id>/20191003cantor/</id>
@@ -409,6 +391,24 @@
     </summary>
     
       <category term="算法" scheme="/categories/%E7%AE%97%E6%B3%95/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>GIFT_summer</title>
+    <link href="/20190815giftsummer/"/>
+    <id>/20190815giftsummer/</id>
+    <published>2019-08-15T14:17:47.000Z</published>
+    <updated>2019-08-17T14:34:06.642Z</updated>
+    
+    <summary type="html">
+    
+      叮！这里有一份礼物请签收
+    
+    </summary>
+    
+      <category term="资源" scheme="/categories/%E8%B5%84%E6%BA%90/"/>
     
     
   </entry>
